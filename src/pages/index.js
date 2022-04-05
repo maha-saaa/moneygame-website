@@ -5,6 +5,7 @@ import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { useRef } from "react";
 import Header from "@/components/header";
 import Layout from "@/components/Layout";
+import Content from "@/components/content";
 
 export default function Home() {
   const router = useRouter();
@@ -14,7 +15,7 @@ export default function Home() {
     <Layout>
       <NextSeo title="Home" />
       <LazyMotion features={domAnimation}>
-        <LocomotiveScrollProvider
+        {/* <LocomotiveScrollProvider
           options={{
             smooth: true,
             // ... all available Locomotive Scroll instance options
@@ -31,12 +32,19 @@ export default function Home() {
             scroll.scrollTo(0, { duration: 0, disableLerp: true })
           }
           containerRef={containerRef}
-        >
+        > */}
           <Header />
-          <m.main initial="initial" animate="enter" exit="exit">
-            <div data-scroll-container ref={containerRef}></div>
+          <m.main
+            initial="initial"
+            animate="enter"
+            exit="exit"
+            style={{ backgroundColor: "#08080E" }}
+          >
+            {/* <div data-scroll-container ref={containerRef}> */}
+              <Content />
+            {/* </div> */}
           </m.main>
-        </LocomotiveScrollProvider>
+        {/* </LocomotiveScrollProvider> */}
       </LazyMotion>
     </Layout>
   );

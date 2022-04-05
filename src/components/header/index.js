@@ -1,12 +1,10 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import colors from "@/styles/colors";
-import MoneyGame from "@/public/images/money-game.svg";
-import Boat from "@/public/images/boat.svg";
+import Logo from "@/public/images/logo.svg";
+import OpenSea from "@/public/images/open-sea.svg";
 import Twitter from "@/public/images/twitter.svg";
 import Discord from "@/public/images/discord.svg";
-import ConnectWalletBtn from "@/public/images/connect-wallet-btn.svg";
-import HorizontalLine from "@/public/images/horizontal-line.svg";
 
 const navbarMenu = [
   {
@@ -31,8 +29,8 @@ export default function Header() {
   const classes = useStyles();
 
   return (
-    <header className={classes.container}>
-      <section className={classes.menu}>
+    <header className={classes.navContainer}>
+      <div className={classes.menu}>
         <ul>
           {navbarMenu?.map((temp) => (
             <li key={temp.key}>
@@ -40,17 +38,17 @@ export default function Header() {
             </li>
           ))}
         </ul>
-      </section>
+      </div>
 
-      <section className={classes.logo}>
-        <MoneyGame />
-      </section>
+      <div className={classes.logo}>
+        <Logo />
+      </div>
 
-      <section className={classes.access}>
+      <div className={classes.access}>
         <ul>
           <li>
             <a href={"./"}>
-              <Boat />
+              <OpenSea />
             </a>
           </li>
           <li>
@@ -64,22 +62,24 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <ConnectWalletBtn />
+            <div class="notched-rectengle-button">
+              <span>Connect Wallet</span>
+            </div>
           </li>
         </ul>
-      </section>
-      {/* <HorizontalLine /> */}
+      </div>
     </header>
   );
 }
 
 const useStyles = createUseStyles({
-  container: {
+  navContainer: {
     backgroundColor: colors.background,
     display: "flex",
     flexDirection: "row",
-    color: colors.lightPurple,
+    color: colors.textPurple,
     alignItems: "center",
+    minHeight: 80,
     justifyContent: "space-between",
     padding: {
       right: 111,
@@ -96,9 +96,9 @@ const useStyles = createUseStyles({
     // top: 0,
   },
   menu: {
-    // "@media screen and (max-width: 1000px)": {
-    //   display: "none",
-    // },
+    "@media screen and (max-width: 1000px)": {
+      display: "none",
+    },
     display: "flex",
     flex: 1,
     "& ul": {
@@ -126,8 +126,15 @@ const useStyles = createUseStyles({
     display: "flex",
     flex: 1,
     justifyContent: "center",
+    margin: {
+      left: 50,
+      right: 50,
+    },
   },
   access: {
+    "@media screen and (max-width: 1000px)": {
+      display: "none",
+    },
     display: "flex",
     flex: 1,
     flexDirection: "row",
@@ -147,9 +154,6 @@ const useStyles = createUseStyles({
         "& a": {
           textDecoration: "none",
           color: colors.text,
-          "&:hover": {
-            color: colors.white,
-          },
         },
       },
     },
