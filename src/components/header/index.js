@@ -29,7 +29,7 @@ export default function Header() {
   const classes = useStyles();
 
   return (
-    <header className={classes.navContainer}>
+    <header className={classes.headerContainer}>
       <div className={classes.menu}>
         <ul>
           {navbarMenu?.map((temp) => (
@@ -62,7 +62,7 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <div class="notched-rectengle-button">
+            <div className="notched-rectengle-button">
               <span>Connect Wallet</span>
             </div>
           </li>
@@ -73,7 +73,7 @@ export default function Header() {
 }
 
 const useStyles = createUseStyles({
-  navContainer: {
+  headerContainer: {
     backgroundColor: colors.background,
     display: "flex",
     flexDirection: "row",

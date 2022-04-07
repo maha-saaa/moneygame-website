@@ -22,7 +22,7 @@ a {
 .notched-rectengle-button {
   --default-px-size: 0px;
   --notched-border-color: rgb(189, 181, 222);
-  --notched-scale: 13px;
+  --notched-scale: 10px;
   --notched-border-size: 1px;
   /* filter: drop-shadow(0px 0px 5px rgba(189, 181, 222, 0.7)); */
   display: flex;
@@ -65,3 +65,48 @@ a {
   font-size: 16px;
   cursor: pointer;
 }
+
+
+.notched-rectengle-card {
+  --default-px-size: 0px;
+  --notched-border-color: rgb(189, 181, 222);
+  --notched-scale: 30px;
+  --notched-border-size: 1px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: "center";
+  width: 70%;
+  height: 89px;
+  margin-bottom: 48px;
+  padding: 24px 28px 46px 24px;
+  /* background-color: rgba(208, 198, 247, 0.1); */
+  cursor: "pointer";
+  border: 1px solid var(--notched-border-color);
+  background: linear-gradient(45deg,
+      var(--notched-border-color) 0 var(--notched-border-size),
+      transparent 0) bottom left / 50% 50%,
+    linear-gradient(-45deg,
+      var(--notched-border-color) 0 calc(var(--notched-scale, var(--default-px-size)) + var(--notched-border-size)),
+      transparent 0) bottom right/50% 50%,
+    linear-gradient(130deg,
+      var(--notched-border-color) 0 var(--notched-border-size),
+      transparent 0) top left / 50% 50%,
+    linear-gradient(-135deg,
+      var(--notched-border-color) 0 var(--notched-border-size),
+      transparent 0) top right / 50% 50%,
+      rgba(208, 198, 247, 0.05);
+
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  -webkit-mask: linear-gradient(45deg, transparent 0 0, #000 0) bottom left,
+    linear-gradient(-45deg, transparent 0 var(--notched-scale, var(--default-px-size)), #000 0) bottom right,
+    linear-gradient(130deg,
+      transparent 0 0,
+      #000 0) top left,
+    linear-gradient(-135deg, transparent 0 0, #000 0) top right;
+  -webkit-mask-size: 50.5% 50.5%;
+  -webkit-mask-repeat: no-repeat;
+}
+
+

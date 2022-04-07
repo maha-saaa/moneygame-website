@@ -4,7 +4,7 @@ import colors from "@/styles/colors";
 import MoneyGameCards from "@/public/images/money-game-cards.svg";
 import LeftBracket from "@/public/images/left-bracket.svg";
 import RightBracket from "@/public/images/right-bracket.svg";
-import bgGlass from "@/public/images/bg-glass.svg";
+import BgGlass from "@/public/images/bg-glass.svg";
 import Bar from "@/public/images/bar.svg";
 import ArrowDown from "@/public/images/arrow-down.svg";
 
@@ -13,9 +13,9 @@ export default function Intro() {
 
   return (
     <section
-      className={classes.container}
-      style={{ backgroundImage: `url(${bgGlass})` }}
+      className={classes.introContainer}
     >
+      <BgGlass className={classes.bg} />
       <MoneyGameCards />
       <div className={classes.info}>
         <div className={classes.leftSec}>
@@ -33,7 +33,7 @@ export default function Intro() {
             <span>10 winners $520,000 each </span>
             <RightBracket />
           </div>
-          <div class="notched-rectengle-button">
+          <div className="notched-rectengle-button">
             <span>MINT</span>
           </div>
         </div>
@@ -55,15 +55,17 @@ export default function Intro() {
 }
 
 const useStyles = createUseStyles({
-  container: {
+  introContainer: {
     backgroundColor: colors.background,
     display: "flex",
     flexDirection: "column",
+    position: "relative",
     alignItems: "center",
     padding: {
       right: 111,
       left: 111,
     },
+    marginBottom: 180,
     color: colors.textPurple,
     "@media screen and (max-width: 1000px)": {
       padding: {
@@ -72,12 +74,20 @@ const useStyles = createUseStyles({
       },
     },
   },
+  bg: {
+    position: "absolute",
+    top: 0
+  },
   info: {
     display: "flex",
     flexDirection: "row",
     alignItems: "flex-start",
     justifyContent: "space-between",
     marginTop: 20,
+    "@media screen and (max-width: 1000px)": {
+      flexDirection: "column",
+      alignItems: "center",
+    },
   },
   leftSec: {
     display: "flex",

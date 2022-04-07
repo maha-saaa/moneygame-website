@@ -3,6 +3,9 @@ import { createUseStyles } from "react-jss";
 import colors from "@/styles/colors";
 import HorizontalLine from "@/public/images/horizontal-line.svg";
 import Intro from "@/components/intro";
+import HowToPlay from "@/components/howToPlay";
+import Team from "@/components/team";
+import Faq from "@/components/faq";
 
 export default function Content() {
   const classes = useStyles();
@@ -11,6 +14,9 @@ export default function Content() {
     <div className={classes.container}>
       <HorizontalLine />
       <Intro />
+      {/* <HowToPlay /> */}
+      <Faq />
+      <Team />
     </div>
   );
 }
