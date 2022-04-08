@@ -1,23 +1,27 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import Image from "next/image";
+import Link from "next/link";
 import colors from "@/styles/colors";
-import LineLeftCircle from "@/public/images/line-left-circle.svg";
-import LeftBracket from "@/public/images/left-bracket.svg";
-import RightBracket from "@/public/images/right-bracket.svg";
+import LineStraight from "@/public/images/line-straight.svg";
+import LeftBracket from "@/public/images/left-bracket-long.svg";
+import RightBracket from "@/public/images/right-bracket-long.svg";
+import avatar1 from "../../../public/images/avatar1.png";
+import avatar2 from "../../../public/images/avatar2.png";
 
 const data = [
   {
     key: 1,
-    name: "Jack Addams",
+    name: "Derivatives Monke",
     socialMedia: "Twitter",
     url: "false",
+    image: avatar1,
   },
   {
     key: 2,
-    name: "Jack Addams",
+    name: "Derivatives Monke",
     socialMedia: "Twitter",
-    url: "false",
+    image: avatar2,
   },
 ];
 
@@ -28,23 +32,25 @@ export default function Team() {
     <section className={classes.teamContainer}>
       <div className={classes.header}>
         <span className={classes.title}>TEAM</span>
-        <LineLeftCircle />
+        <div className="outer-circle-small">
+          <div className="inner-circle-small"></div>
+        </div>
+        <LineStraight />
       </div>
       <div className={classes.list}>
         {data.map((temp) => (
           <div key={temp.key} className={classes.listItem}>
-            {/* <Image
+            <Image
               alt="Mountains"
-              src="./"
-              layout="fill"
+              src={temp.image}
               objectFit="cover"
               quality={100}
-            /> */}
+            />
             <div className={classes.listItemInfo}>
               <LeftBracket />
               <div className={classes.listItemContact}>
                 <span>{temp.name}</span>
-                <a>{temp.socialMedia}</a>
+                <Link href="">{temp.socialMedia}</Link>
               </div>
               <RightBracket />
             </div>
@@ -72,6 +78,7 @@ const useStyles = createUseStyles({
     display: "flex",
     flex: 1,
     flexDirection: "row",
+    alignItems: "center",
     marginBottom: 107,
     "@media screen and (max-width: 1000px)": {
       flexDirection: "column",
@@ -90,18 +97,20 @@ const useStyles = createUseStyles({
     display: "flex",
     flex: 1,
     flexDirection: "row",
+    justifyContent: "space-between",
   },
   listItem: {
     display: "flex",
     flex: 1,
     flexDirection: "column",
-    justifyContent: "space-between",
+    marginRight: 50,
+    marginLeft: 50,
   },
   listItemInfo: {
     display: "flex",
     flex: 1,
     flexDirection: "row",
-    marginTop: 35,
+    marginTop: 44,
   },
   listItemContact: {
     display: "flex",
@@ -109,7 +118,17 @@ const useStyles = createUseStyles({
     flexDirection: "column",
     justifyContent: "space-between",
     color: colors.whiteWithOpacity,
-    marginLeft: 15,
-    marginRight: 91,
+    margin: {
+      left: 15,
+      top: 10,
+      bottom: 10,
+    },
+    "& span": {
+      fontSize: 34,
+      fontWeight: "bold",
+    },
+    "& a": {
+      fontSize: 28,
+    },
   },
 });

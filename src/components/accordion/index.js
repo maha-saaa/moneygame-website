@@ -2,6 +2,8 @@ import { useState } from "react";
 import { createUseStyles } from "react-jss";
 import { m } from "framer-motion";
 import colors from "@/styles/colors";
+import ArrowUp from "@/public/images/arrow-up.svg";
+import ArrowDown from "@/public/images/arrow-down.svg";
 
 const Accordion = ({ question, answer }) => {
   const classes = useStyles();
@@ -13,7 +15,14 @@ const Accordion = ({ question, answer }) => {
       className="notched-rectengle-card"
       onClick={() => setIsOpen(!isOpen)}
     >
-      <m.div className={classes.question}>{question}</m.div>
+      <m.div style={{ display: "flex", flexDirection: "row" }}>
+        <m.div className={classes.question}>{question}</m.div>
+        {!isOpen ? (
+          <ArrowDown className={classes.arrow} />
+        ) : (
+          <ArrowUp className={classes.arrow} />
+        )}
+      </m.div>
       {isOpen && (
         <m.div
           className={classes.answer}
@@ -51,5 +60,8 @@ const useStyles = createUseStyles({
     justifyContent: "flex-start",
     alignSelf: "flex-start",
     marginTop: 22,
+  },
+  arrow: {
+    marginLeft: "auto",
   },
 });

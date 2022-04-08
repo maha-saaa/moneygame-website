@@ -6,7 +6,7 @@ import LeftBracket from "@/public/images/left-bracket.svg";
 import RightBracket from "@/public/images/right-bracket.svg";
 import BgGlass from "@/public/images/bg-glass.svg";
 import Bar from "@/public/images/bar.svg";
-import ArrowDown from "@/public/images/arrow-down.svg";
+import ArrowDown from "@/public/images/arrow-down-3.svg";
 
 export default function Intro() {
   const classes = useStyles();
