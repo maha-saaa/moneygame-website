@@ -55,7 +55,7 @@ const useStyles = createUseStyles({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    paddingBottom: 459
+    paddingBottom: 312
   },
   title: {
     fontSize: 60,

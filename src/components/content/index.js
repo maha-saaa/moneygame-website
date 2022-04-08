@@ -6,17 +6,20 @@ import Intro from "@/components/intro";
 import HowToPlay from "@/components/howToPlay";
 import Team from "@/components/team";
 import Faq from "@/components/faq";
+import Footer from "@/components/footer";
+
 
 export default function Content() {
   const classes = useStyles();
 
   return (
-    <div className={classes.container}>
+    <div className={classes.container} data-scroll-section>
       <HorizontalLine />
       <Intro />
       {/* <HowToPlay /> */}
       <Faq />
       <Team />
+      <Footer />
     </div>
   );
 }

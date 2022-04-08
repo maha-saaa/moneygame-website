@@ -1,12 +1,13 @@
+@import "_locomotive.css";
+
 html,
 body {
   padding: 0;
   margin: 0;
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow: hidden;
+  font-family: "PTSans";
 }
 
 a {
@@ -17,6 +18,16 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: 'PTSans';
+  src: url('../../public/fonts/PTSans-Bold.ttf');
+  src: url('../../public/fonts/PTSans-BoldItalic.ttf');
+  src: url('../../public/fonts/PTSans-Italic.ttf');
+  src: url('../../public/fonts/PTSans-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+  }
 
 
 .notched-rectengle-button {
@@ -80,8 +91,7 @@ a {
   height: 89px;
   margin-bottom: 48px;
   padding: 24px 28px 46px 24px;
-  /* background-color: rgba(208, 198, 247, 0.1); */
-  cursor: "pointer";
+  cursor: pointer;
   border: 1px solid var(--notched-border-color);
   background: linear-gradient(45deg,
       var(--notched-border-color) 0 var(--notched-border-size),

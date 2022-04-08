@@ -6,7 +6,6 @@ import LineLeftCircle from "@/public/images/line-left-circle.svg";
 import LeftBracket from "@/public/images/left-bracket.svg";
 import RightBracket from "@/public/images/right-bracket.svg";
 
-
 const data = [
   {
     key: 1,
@@ -16,12 +15,6 @@ const data = [
   },
   {
     key: 2,
-    name: "Jack Addams",
-    socialMedia: "Twitter",
-    url: "false",
-  },
-  {
-    key: 3,
     name: "Jack Addams",
     socialMedia: "Twitter",
     url: "false",
@@ -102,13 +95,13 @@ const useStyles = createUseStyles({
     display: "flex",
     flex: 1,
     flexDirection: "column",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
   },
   listItemInfo: {
     display: "flex",
     flex: 1,
     flexDirection: "row",
-    marginTop: 35
+    marginTop: 35,
   },
   listItemContact: {
     display: "flex",
