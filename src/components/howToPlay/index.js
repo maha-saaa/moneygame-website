@@ -6,6 +6,11 @@ import CoinRight from "@/public/images/coin-right.svg";
 import LineNumberUp from "@/public/images/line-number-up.svg";
 import LineNumberDown from "@/public/images/line-number-down.svg";
 import PlayCardOne from "@/public/images/play-card-one.svg";
+import PlayCardTwo from "@/public/images/play-card-two.svg";
+import PlayCardThree from "@/public/images/play-card-three.svg";
+import PlayCardFour from "@/public/images/play-card-four.svg";
+import PlayLineLeft from "@/public/images/play-line-left.svg";
+import PlayLineRight from "@/public/images/play-line-right.svg";
 
 export default function HowToPlay() {
   const classes = useStyles();
@@ -19,61 +24,68 @@ export default function HowToPlay() {
       </div>
       <div className={classes.info}>
         <div className={classes.playRow}>
-          <div className="outer-circle">
+          <div
+            className="outer-circle"
+            style={{ position: "absolute", left: 100, top: 195 }}
+          >
             <div className="inner-circle">
               <span>1</span>
             </div>
           </div>
           <div className={classes.leftSidedPlayRow}>
-            <span className={classes.leftSidedPlayRowTitle}>
-              MINT YOUR PASS
-            </span>
-            <span className={classes.leftSidedPlayRowDesc}>
+            <span className={classes.firstPlayRowTitle}>MINT YOUR PASS</span>
+            <span className={classes.firstPlayRowDesc}>
               {`Get on the whitelist and mint your pass.\nYour minting funds go into the prize pool.`}
             </span>
           </div>
-          <PlayCardOne />
+          <PlayLineLeft className={classes.firstPlayLine} />
+          <PlayCardOne className={classes.playCard} />
         </div>
         <div className={classes.playRow}>
-          <PlayCardOne />
+          <PlayCardTwo className={classes.playCard} />
+          <PlayLineRight className={classes.secondPlayLine} />
           <div className={classes.leftSidedPlayRow}>
-            <span className={classes.leftSidedPlayRowTitle}>Determination</span>
-            <span className={classes.leftSidedPlayRowDesc}>
+            <span className={classes.secondPlayRowTitle}>Determination</span>
+            <span className={classes.secondPlayRowDesc}>
               {`Using Smart Contracts your pass is\n determined as a winner or loser. 
                 We can’t change this or know who the\n winners are.`}
             </span>
           </div>
-          <div className="outer-circle">
+          <div
+            className="outer-circle"
+            style={{ position: "absolute", right: 100, bottom: 120 }}
+          >
             <div className="inner-circle">
               <span>2</span>
             </div>
           </div>
         </div>
         <div className={classes.playRow}>
-          <div className="outer-circle">
+          <div
+            className="outer-circle"
+            style={{ position: "absolute", left: 100, bottom: 150 }}
+          >
             <div className="inner-circle">
               <span>3</span>
             </div>
           </div>
           <div className={classes.leftSidedPlayRow}>
-            <span className={classes.leftSidedPlayRowTitle}>
-              Burn your Pass
-            </span>
-            <span className={classes.leftSidedPlayRowDesc}>
+            <span className={classes.thirdPlayRowTitle}>Burn your Pass</span>
+            <span className={classes.thirdPlayRowDesc}>
               {`Your passes status as winner or loser is only
                 determined when you burn the pass in the\n prize poll contract.
                 If its revealed as a winner you claim your %\n of the jackpot ($5000,000)`}
             </span>
           </div>
-          <PlayCardOne />
+          <PlayLineLeft className={classes.thirdPlayLine} />
+          <PlayCardThree className={classes.playCard} />
         </div>
         <div className={classes.playRow}>
-          <PlayCardOne />
+          <PlayCardFour className={classes.playCard} />
+          <PlayLineRight className={classes.fourthPlayLine} />
           <div className={classes.leftSidedPlayRow}>
-            <span className={classes.leftSidedPlayRowTitle}>
-              Burn your Pass
-            </span>
-            <span className={classes.leftSidedPlayRowDesc}>
+            <span className={classes.fourthPlayRowTitle}>Secondary Market</span>
+            <span className={classes.fourthPlayRowDesc}>
               {`Passes can also be sold on secondary, what
                 will happen if there is only 10 passes left
                 and still a prize to claim, will you risk
@@ -81,7 +93,10 @@ export default function HowToPlay() {
                 will you try to claim the prize yourself?`}
             </span>
           </div>
-          <div className="outer-circle">
+          <div
+            className="outer-circle"
+            style={{ position: "absolute", right: 100, top: 200 }}
+          >
             <div className="inner-circle">
               <span>4</span>
             </div>
@@ -154,12 +169,13 @@ const useStyles = createUseStyles({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "center",
+    // alignItems: "center",
     padding: {
       left: 100,
       right: 100,
     },
     marginBottom: 20,
+    position: "relative",
   },
   playCol: {
     display: "flex",
@@ -183,16 +199,6 @@ const useStyles = createUseStyles({
     display: "flex",
     flexDirection: "column",
   },
-  leftSidedPlayRowTitle: {
-    composes: ["$playTitle"],
-    textAlign: "start",
-    marginBottom: 40,
-  },
-  leftSidedPlayRowDesc: {
-    composes: ["$playDesc"],
-    textAlign: "start",
-    whiteSpace: "pre-line",
-  },
   centerPlayColTitle: {
     composes: ["$playTitle"],
     textAlign: "center",
@@ -202,5 +208,92 @@ const useStyles = createUseStyles({
     composes: ["$playDesc"],
     textAlign: "center",
     marginBottom: 40,
+  },
+  playCard: {
+    zIndex: 1,
+  },
+
+  firstPlayRowTitle: {
+    composes: ["$playTitle"],
+    textAlign: "start",
+    position: "absolute",
+    top: 100,
+    left: 300,
+  },
+  firstPlayRowDesc: {
+    composes: ["$playDesc"],
+    textAlign: "start",
+    whiteSpace: "pre-line",
+    position: "absolute",
+    top: 230,
+    left: 300,
+  },
+  firstPlayLine: {
+    position: "absolute",
+    right: 490,
+    top: 184,
+  },
+
+  secondPlayRowTitle: {
+    composes: ["$playTitle"],
+    textAlign: "start",
+    position: "absolute",
+    top: 180,
+    right: 440,
+  },
+  secondPlayRowDesc: {
+    composes: ["$playDesc"],
+    textAlign: "start",
+    whiteSpace: "pre-line",
+    position: "absolute",
+    top: 300,
+    right: 320,
+  },
+  secondPlayLine: {
+    position: "absolute",
+    left: 514,
+    top: 263,
+  },
+
+  thirdPlayRowTitle: {
+    composes: ["$playTitle"],
+    textAlign: "start",
+    position: "absolute",
+    top: 150,
+    left: 300,
+  },
+  thirdPlayRowDesc: {
+    composes: ["$playDesc"],
+    textAlign: "start",
+    whiteSpace: "pre-line",
+    position: "absolute",
+    top: 280,
+    left: 300,
+  },
+  thirdPlayLine: {
+    position: "absolute",
+    right: 489,
+    top: 230,
+  },
+
+  fourthPlayRowTitle: {
+    composes: ["$playTitle"],
+    textAlign: "start",
+    position: "absolute",
+    top: 110,
+    right: 440,
+  },
+  fourthPlayRowDesc: {
+    composes: ["$playDesc"],
+    textAlign: "start",
+    whiteSpace: "pre-line",
+    position: "absolute",
+    top: 220,
+    right: 330,
+  },
+  fourthPlayLine: {
+    position: "absolute",
+    left: 514,
+    top: 184,
   },
 });
