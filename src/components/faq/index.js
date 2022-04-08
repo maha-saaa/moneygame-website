@@ -40,12 +40,12 @@ export default function Faq() {
   const classes = useStyles();
 
   return (
-    <div className={classes.faqContainer}>
+    <section className={classes.faqContainer}>
       <span className={classes.title}>F.A.Q</span>
       {questionsList?.map((temp) => (
         <Accordion question={temp.question} answer={temp.answer} />
       ))}
-    </div>
+    </section>
   );
 }
 

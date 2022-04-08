@@ -25,7 +25,7 @@ export default function Team() {
   const classes = useStyles();
 
   return (
-    <div className={classes.teamContainer}>
+    <section className={classes.teamContainer}>
       <div className={classes.header}>
         <span className={classes.title}>TEAM</span>
         <LineLeftCircle />
@@ -51,7 +51,7 @@ export default function Team() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

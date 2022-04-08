@@ -77,7 +77,7 @@ const useStyles = createUseStyles({
     backgroundColor: colors.background,
     display: "flex",
     flexDirection: "row",
-    color: colors.textPurple,
+    
     alignItems: "center",
     minHeight: 80,
     justifyContent: "space-between",
@@ -101,6 +101,7 @@ const useStyles = createUseStyles({
     },
     display: "flex",
     flex: 1,
+    color: colors.textPurple,
     "& ul": {
       display: "flex",
       flex: 1,

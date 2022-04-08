@@ -52,7 +52,7 @@ a {
     linear-gradient(-135deg,
       var(--notched-border-color) 0 var(--notched-border-size),
       transparent 0) top right / 50% 50%,
-    transparent;
+      linear-gradient(rgba(208, 198, 247, 0.3),rgba(248, 180, 252, 0.3));
 
   background-origin: border-box;
   background-repeat: no-repeat;
@@ -75,8 +75,8 @@ a {
   /* text-shadow: 0px 0px 15px var(--notched-border-color); */
   font-size: 16px;
   cursor: pointer;
+  color: rgba(255, 255, 255, 1);
 }
-
 
 .notched-rectengle-card {
   --default-px-size: 0px;
@@ -88,9 +88,9 @@ a {
   flex-direction: column;
   align-items: "center";
   width: 70%;
-  height: 89px;
+  /* height: 89px; */
   margin-bottom: 48px;
-  padding: 24px 28px 46px 24px;
+  padding: 24px 28px 24px 24px;
   cursor: pointer;
   border: 1px solid var(--notched-border-color);
   background: linear-gradient(45deg,
@@ -105,7 +105,7 @@ a {
     linear-gradient(-135deg,
       var(--notched-border-color) 0 var(--notched-border-size),
       transparent 0) top right / 50% 50%,
-      rgba(208, 198, 247, 0.05);
+      linear-gradient(rgba(208, 198, 247, 0.1),rgba(248, 180, 252, 0.1));
 
   background-origin: border-box;
   background-repeat: no-repeat;
@@ -117,6 +117,47 @@ a {
     linear-gradient(-135deg, transparent 0 0, #000 0) top right;
   -webkit-mask-size: 50.5% 50.5%;
   -webkit-mask-repeat: no-repeat;
+}
+
+.outer-circle {
+  background: rgba(208, 198, 247, 0.15);
+  border-radius: 50%;
+  height: 129px;
+  width: 129px;
+  position: relative;
+  border: 0.5px solid rgba(255, 188, 255, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-circle {
+  position: absolute;
+  /* background: rgba(208, 198, 247, 0.15); */
+  border-radius: 50%;
+  height: 98.9px;
+  width: 98.9px;
+  border: 1px solid rgba(255, 188, 255, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:  0px 0px 15px rgba(208, 198, 247, 0.6);
+  /*
+   Put top edge and left edge in the center
+  */
+  /* top: 50%;
+  left: 50%;
+  margin: -50px 0px 0px -50px; */
+  /* 
+   Offset the position correctly with
+   minus half of the width and minus half of the height 
+  */
+}
+
+.inner-circle span {
+  font-size: 56px;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: -6px -6px 9px rgba(208, 198, 247, 0.6);
 }
 
 

@@ -16,7 +16,7 @@ export default function Content() {
     <div className={classes.container} data-scroll-section>
       <HorizontalLine />
       <Intro />
-      {/* <HowToPlay /> */}
+      <HowToPlay />
       <Faq />
       <Team />
       <Footer />
