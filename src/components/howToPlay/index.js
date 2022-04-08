@@ -185,6 +185,7 @@ const useStyles = createUseStyles({
       left: 135,
       right: 135,
     },
+    marginTop: 100
   },
   playTitle: {
     fontSize: 44,
