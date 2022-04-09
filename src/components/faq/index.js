@@ -34,7 +34,11 @@ export default function Faq() {
     <section className={classes.faqContainer}>
       <span className={classes.title}>F.A.Q</span>
       {questionsList?.map((temp) => (
-        <Accordion question={temp.question} answer={temp.answer} />
+        <Accordion
+          question={temp.question}
+          answer={temp.answer}
+          key={temp.key}
+        />
       ))}
     </section>
   );
