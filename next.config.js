@@ -1,6 +1,5 @@
 module.exports = {
   swcMinify: true,
-   useFileSystemPublicRoutes: false,
   webpack: (config, { dev, isServer }) => {
     config.module.rules.push({
       test: /\.svg$/i,

@@ -3,7 +3,7 @@ import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { useRef } from "react";
-import Layout from "@/components/Layout";
+import Layout from "@/components/layout";
 import Content from "@/components/content";
 
 export default function Home() {
