@@ -5,6 +5,8 @@ import Logo from "@/public/images/logo.svg";
 import OpenSea from "@/public/images/open-sea.svg";
 import Twitter from "@/public/images/twitter.svg";
 import Discord from "@/public/images/discord.svg";
+import { injected } from "../../connector/connector";
+import { useWeb3React } from "@web3-react/core";
 
 const navbarMenu = [
   {
@@ -27,6 +29,33 @@ const navbarMenu = [
 
 export default function Header() {
   const classes = useStyles();
+  const {
+    account,
+    activate,
+    active,
+    chainId,
+    connector,
+    deactivate,
+    error,
+    provider,
+    setError,
+  } = useWeb3React();
+
+  const connect = async () => {
+    try {
+      await activate(injected);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const disconnect = async () => {
+    try {
+      deactivate();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <header className={classes.headerContainer}>
@@ -62,9 +91,17 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <div className="notched-rectengle-button">
-              <span>Connect Wallet</span>
+            <div
+              className="notched-rectengle-button"
+              onClick={active ? disconnect : connect}
+            >
+              {!active ? <span>Connect Wallet</span> : <span>Disconnect</span>}
             </div>
+            {active ? (
+              <span style={{ color: colors.white }}>
+                Connected with<b>{account}</b>
+              </span>
+            ) : null}
           </li>
         </ul>
       </div>
@@ -77,7 +114,6 @@ const useStyles = createUseStyles({
     backgroundColor: colors.background,
     display: "flex",
     flexDirection: "row",
-    
     alignItems: "center",
     minHeight: 80,
     justifyContent: "space-between",
