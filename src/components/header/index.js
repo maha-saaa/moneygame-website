@@ -97,14 +97,10 @@ export default function Header() {
             >
               {!active ? <span>Connect Wallet</span> : <span>Disconnect</span>}
             </div>
-            {active ? (
-              <span style={{ color: colors.white }}>
-                Connected with<b>{account}</b>
-              </span>
-            ) : null}
           </li>
         </ul>
       </div>
+      {active ? <span style={{ color: colors.white }}>{`${account.slice(0,5)}...`}</span> : null}
     </header>
   );
 }

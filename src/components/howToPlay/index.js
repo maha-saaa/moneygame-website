@@ -11,6 +11,7 @@ import PlayCardThree from "@/public/images/play-card-three.svg";
 import PlayCardFour from "@/public/images/play-card-four.svg";
 import PlayLineLeft from "@/public/images/play-line-left.svg";
 import PlayLineRight from "@/public/images/play-line-right.svg";
+import Line from "@/public/images/line.svg";
 
 export default function HowToPlay() {
   const classes = useStyles();
@@ -18,15 +19,17 @@ export default function HowToPlay() {
   return (
     <section className={classes.howToPlayContainer}>
       <div className={classes.header}>
+        <Line />
         <CoinLeft />
         <span className={classes.title}>HOW TO PLAY</span>
         <CoinRight />
+        <Line />
       </div>
       <div className={classes.info}>
         <div className={classes.playRow}>
           <div
             className="outer-circle"
-            style={{ position: "absolute", left: 100, top: 195 }}
+            style={{ position: "absolute", left: 110, bottom: 160 }}
           >
             <div className="inner-circle">
               <span>1</span>
@@ -53,7 +56,7 @@ export default function HowToPlay() {
           </div>
           <div
             className="outer-circle"
-            style={{ position: "absolute", right: 100, bottom: 120 }}
+            style={{ position: "absolute", right: 103, bottom: 90 }}
           >
             <div className="inner-circle">
               <span>2</span>
@@ -63,7 +66,7 @@ export default function HowToPlay() {
         <div className={classes.playRow}>
           <div
             className="outer-circle"
-            style={{ position: "absolute", left: 100, bottom: 150 }}
+            style={{ position: "absolute", left: 107, bottom: 120 }}
           >
             <div className="inner-circle">
               <span>3</span>
@@ -74,7 +77,7 @@ export default function HowToPlay() {
             <span className={classes.thirdPlayRowDesc}>
               {`Your passes status as winner or loser is only
                 determined when you burn the pass in the\n prize poll contract.
-                If its revealed as a winner you claim your %\n of the jackpot ($5000,000)`}
+                If it's revealed as a winner you claim your %\n of the jackpot ($5000,000)`}
             </span>
           </div>
           <PlayLineLeft className={classes.thirdPlayLine} />
@@ -95,7 +98,7 @@ export default function HowToPlay() {
           </div>
           <div
             className="outer-circle"
-            style={{ position: "absolute", right: 100, top: 200 }}
+            style={{ position: "absolute", right: 104, bottom: 170 }}
           >
             <div className="inner-circle">
               <span>4</span>
@@ -174,7 +177,7 @@ const useStyles = createUseStyles({
       left: 100,
       right: 100,
     },
-    marginBottom: 20,
+    marginBottom: 30,
     position: "relative",
   },
   playCol: {
@@ -185,7 +188,7 @@ const useStyles = createUseStyles({
       left: 135,
       right: 135,
     },
-    marginTop: 100
+    marginTop: 100,
   },
   playTitle: {
     fontSize: 44,
@@ -231,7 +234,7 @@ const useStyles = createUseStyles({
   },
   firstPlayLine: {
     position: "absolute",
-    right: 490,
+    right: 518,
     top: 184,
   },
 
@@ -252,7 +255,7 @@ const useStyles = createUseStyles({
   },
   secondPlayLine: {
     position: "absolute",
-    left: 514,
+    left: 535,
     top: 263,
   },
 
@@ -273,7 +276,7 @@ const useStyles = createUseStyles({
   },
   thirdPlayLine: {
     position: "absolute",
-    right: 489,
+    right: 518,
     top: 230,
   },
 
@@ -294,7 +297,7 @@ const useStyles = createUseStyles({
   },
   fourthPlayLine: {
     position: "absolute",
-    left: 514,
+    left: 534,
     top: 184,
   },
 });

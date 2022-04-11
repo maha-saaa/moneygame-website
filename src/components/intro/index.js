@@ -6,28 +6,25 @@ import LeftBracket from "@/public/images/left-bracket.svg";
 import RightBracket from "@/public/images/right-bracket.svg";
 import BgGlass from "@/public/images/bg-glass.svg";
 import Bar from "@/public/images/bar.svg";
-import ArrowDown from "@/public/images/arrow-down-3.svg";
+import ButtonBracket from "@/public/images/button-bracket.svg";
 
 export default function Intro() {
   const classes = useStyles();
 
   return (
-    <section
-      className={classes.introContainer}
-    >
+    <section className={classes.introContainer}>
       <BgGlass className={classes.bg} />
       <MoneyGameCards />
       <div className={classes.info}>
         <div className={classes.leftSec}>
-          <div className={classes.timeLineBtn}>
-            <p className={classes.timeLineText}>Time Line</p>
-            <ArrowDown />
-          </div>
+          <ButtonBracket className={classes.timeLineBtn} />
         </div>
         <div className={classes.centerSec}>
-          <span style={{ fontStyle: "italic" }}>Current Prize Pool</span>
+          <div>
+            <span>Current Prize Pool</span>
+          </div>
           <span className={classes.textWithShadow}>$5,600,000</span>
-          <Bar />
+          <Bar style={{ zIndex: 1 }} />
           <div>
             <LeftBracket />
             <span>10 winners $520,000 each </span>
@@ -40,13 +37,11 @@ export default function Intro() {
         <div className={classes.rightSec}>
           <span className={classes.rightSecTitle}>SOLD OUT?</span>
           <span className={classes.rightSecDesc}>
-            You can still buy on secondary markets to participatein the game and
-            game theory!
+            You can still buy on secondary markets to participate in the game
+            and game theory!
           </span>
           <span className={classes.rightSecTitle}>Price?</span>
-          <span className={classes.rightSecDesc}>
-            600 passes waiting for you just 0.2 ETH each
-          </span>
+          <span className={classes.rightSecDesc}>0.2 ETH each</span>
           <span>Press mint for more info</span>
         </div>
       </div>
@@ -76,7 +71,7 @@ const useStyles = createUseStyles({
   },
   bg: {
     position: "absolute",
-    top: 0
+    top: 0,
   },
   info: {
     display: "flex",
@@ -97,29 +92,19 @@ const useStyles = createUseStyles({
     marginRight: 40,
   },
   timeLineBtn: {
-    display: "flex",
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    border: "1px solid rgba(208, 198, 247, 0.3)",
-    minWidth: 167,
-    borderRadius: 1,
+    zIndex: 1,
     cursor: "pointer",
-  },
-  timeLineText: {
-    fontSize: 20,
-    fontWeight: 400,
-    color: colors.whiteWithOpacity,
-    marginRight: 16,
   },
   centerSec: {
     display: "flex",
     flex: 3,
     flexDirection: "column",
     alignItems: "center",
-    "& span:nth-child(1)": {
-      fontSize: 24,
+    "& div:nth-child(1)": {
+      "& span": {
+        fontSize: 24,
+        fontStyle: "italic",
+      },
     },
 
     "& div:nth-child(4)": {

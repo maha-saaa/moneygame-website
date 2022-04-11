@@ -27,5 +27,6 @@ export default function Content() {
 const useStyles = createUseStyles({
   container: {
     backgroundColor: colors.background,
+    paddingBottom: 118,
   },
 });

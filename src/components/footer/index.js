@@ -19,6 +19,7 @@ export default function Footer() {
         </div>
       </div>
       <HorizontalLine />
+      <span className={classes.bottomText}>A PROJECT BY FND</span>
     </footer>
   );
 }
@@ -26,7 +27,9 @@ export default function Footer() {
 const useStyles = createUseStyles({
   footerContainer: {
     backgroundColor: colors.background,
-    paddingBottom: 191
+    display: "flex",
+    flex: 1,
+    flexDirection: "column",
   },
   contact: {
     display: "flex",
@@ -52,5 +55,10 @@ const useStyles = createUseStyles({
     color: colors.textPurpleWithOpacity,
     textAlign: "center",
     marginBottom: 52,
+  },
+  bottomText: {
+    color: colors.textPurple,
+    textAlign: "center",
+    marginTop: 118,
   },
 });
