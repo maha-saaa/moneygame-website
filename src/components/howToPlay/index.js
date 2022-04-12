@@ -6,7 +6,7 @@ import coinLeft from "@/public/images/coin-left.png";
 import coinRight from "@/public/images/coin-right.png";
 import lineNumberUp from "@/public/images/line-number-up.png";
 import lineNumberDown from "@/public/images/line-number-down.png";
-import lineNumberUpS from "../../../public/images/line-number-up-s.png";
+import lineNumberUpS from "@/public/images/line-number-up-s.png";
 import playCardOne from "@/public/images/play-card-one.png";
 import playCardTwo from "@/public/images/play-card-two.png";
 import playCardThree from "@/public/images/play-card-three.png";
