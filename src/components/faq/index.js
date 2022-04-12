@@ -51,6 +51,9 @@ const useStyles = createUseStyles({
     flexDirection: "column",
     alignItems: "center",
     paddingBottom: 312,
+    "@media screen and (max-width: 600px)": {
+      paddingBottom: 173,
+    },
   },
   title: {
     fontSize: 60,
@@ -59,5 +62,9 @@ const useStyles = createUseStyles({
     color: colors.whiteWithOpacity,
     textAlign: "center",
     marginBottom: 74,
+    "@media screen and (max-width: 600px)": {
+      fontSize: 35,
+      marginBottom: 46,
+    },
   },
 });

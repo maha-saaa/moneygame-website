@@ -52,6 +52,9 @@ const useStyles = createUseStyles({
     display: "flex",
     justifyContent: "flex-start",
     alignSelf: "flex-start",
+    "@media screen and (max-width: 600px)": {
+      fontSize: 15,
+    },
   },
   answer: {
     fontSize: 20,
@@ -60,6 +63,9 @@ const useStyles = createUseStyles({
     justifyContent: "flex-start",
     alignSelf: "flex-start",
     marginTop: 22,
+    "@media screen and (max-width: 600px)": {
+      fontSize: 20,
+    },
   },
   arrow: {
     marginLeft: "auto",

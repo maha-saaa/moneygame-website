@@ -1,12 +1,13 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
+import Image from "next/image";
 import colors from "@/styles/colors";
-import MoneyGameCards from "@/public/images/money-game-cards.svg";
 import LeftBracket from "@/public/images/left-bracket.svg";
 import RightBracket from "@/public/images/right-bracket.svg";
 import BgGlass from "@/public/images/bg-glass.svg";
-import Bar from "@/public/images/bar.svg";
+import bar from "@/public/images/bar.png";
 import ButtonBracket from "@/public/images/button-bracket.svg";
+import frames from "../../../public/images/frames.png";
 
 export default function Intro() {
   const classes = useStyles();
@@ -14,7 +15,13 @@ export default function Intro() {
   return (
     <section className={classes.introContainer}>
       <BgGlass className={classes.bg} />
-      <MoneyGameCards />
+      <Image
+        alt="cards"
+        src={frames}
+        objectFit="cover"
+        quality={100}
+        unoptimized
+      />
       <div className={classes.info}>
         <div className={classes.leftSec}>
           <ButtonBracket className={classes.timeLineBtn} />
@@ -24,7 +31,7 @@ export default function Intro() {
             <span>Current Prize Pool</span>
           </div>
           <span className={classes.textWithShadow}>$5,600,000</span>
-          <Bar style={{ zIndex: 1 }} />
+          <Image alt="cards" src={bar} objectFit="cover" />
           <div>
             <LeftBracket />
             <span>10 winners $520,000 each </span>
@@ -35,15 +42,20 @@ export default function Intro() {
           </div>
         </div>
         <div className={classes.rightSec}>
-          <span className={classes.rightSecTitle}>SOLD OUT?</span>
-          <span className={classes.rightSecDesc}>
-            You can still buy on secondary markets to participate in the game
-            and game theory!
-          </span>
-          <span className={classes.rightSecTitle}>Price?</span>
-          <span className={classes.rightSecDesc}>0.2 ETH each</span>
-          <span>Press mint for more info</span>
+          <div className={classes.rightSecTextContainer}>
+            <span className={classes.rightSecTitle}>SOLD OUT?</span>
+            <span className={classes.rightSecDesc}>
+              You can still buy on secondary markets to participate in the game
+              and game theory!
+            </span>
+          </div>
+          <div className={classes.rightSecTextContainer}>
+            <span className={classes.rightSecTitle}>Price?</span>
+            <span className={classes.rightSecDesc}>0.2 ETH each</span>
+            <span>Press mint for more info</span>
+          </div>
         </div>
+        <ButtonBracket className={classes.timeLineBtnSmallScreen} />
       </div>
     </section>
   );
@@ -79,7 +91,7 @@ const useStyles = createUseStyles({
     alignItems: "flex-start",
     justifyContent: "space-between",
     marginTop: 20,
-    "@media screen and (max-width: 1000px)": {
+    "@media screen and (max-width: 1200px)": {
       flexDirection: "column",
       alignItems: "center",
     },
@@ -91,9 +103,20 @@ const useStyles = createUseStyles({
     alignItems: "center",
     marginRight: 40,
   },
+  timeLineBtnSmallScreen: {
+    zIndex: 1,
+    cursor: "pointer",
+    marginTop: 41,
+    "@media screen and (min-width: 1200px)": {
+      display: "none",
+    },
+  },
   timeLineBtn: {
     zIndex: 1,
     cursor: "pointer",
+    "@media screen and (max-width: 1200px)": {
+      display: "none",
+    },
   },
   centerSec: {
     display: "flex",
@@ -104,6 +127,9 @@ const useStyles = createUseStyles({
       "& span": {
         fontSize: 24,
         fontStyle: "italic",
+        "@media screen and (max-width: 1000px)": {
+          fontSize: 20,
+        },
       },
     },
 
@@ -116,6 +142,9 @@ const useStyles = createUseStyles({
       "& span": {
         fontSize: 20,
         fontWeight: "bold",
+        "@media screen and (max-width: 1000px)": {
+          fontSize: 16,
+        },
       },
     },
   },
@@ -129,13 +158,32 @@ const useStyles = createUseStyles({
       top: 10,
       bottom: 10,
     },
+    "@media screen and (max-width: 1000px)": {
+      fontSize: 64,
+    },
   },
   rightSec: {
     display: "flex",
     flex: 1,
     flexDirection: "column",
     marginLeft: 40,
-
+    "@media screen and (max-width: 1200px)": {
+      flexDirection: "row",
+      marginLeft: 0,
+      marginTop: 130,
+      alignItems: "center",
+      justifyContent: "space-between",
+    },
+    "& div:nth-child(1)": {
+      "@media screen and (max-width: 1200px)": {
+        marginRight: 51,
+      },
+    },
+  },
+  rightSecTextContainer: {
+    display: "flex",
+    flex: 1,
+    flexDirection: "column",
     "& span:nth-child(5)": {
       fontSize: 14,
       fontWeight: "bold",

@@ -100,7 +100,12 @@ export default function Header() {
           </li>
         </ul>
       </div>
-      {active ? <span style={{ color: colors.white }}>{`${account.slice(0,5)}...`}</span> : null}
+      {active ? (
+        <span className={classes.activateNumber}>{`${account.slice(
+          0,
+          5
+        )}...`}</span>
+      ) : null}
     </header>
   );
 }
@@ -163,11 +168,11 @@ const useStyles = createUseStyles({
       left: 50,
       right: 50,
     },
+    "@media screen and (max-width: 600px)": {
+      margin: 0,
+    },
   },
   access: {
-    "@media screen and (max-width: 1000px)": {
-      display: "none",
-    },
     display: "flex",
     flex: 1,
     flexDirection: "row",
@@ -179,16 +184,25 @@ const useStyles = createUseStyles({
       flexDirection: "row",
       justifyContent: "center",
       alignItems: "center",
-      "& li": {
+      "& li:not(:last-child)": {
         listStyle: "none",
         marginRight: 24,
         listStyleType: "none",
         display: "list-item",
+        "@media screen and (max-width: 1000px)": {
+          display: "none",
+        },
         "& a": {
           textDecoration: "none",
           color: colors.text,
         },
       },
+    },
+  },
+  activateNumber: {
+    color: colors.white,
+    "@media screen and (max-width: 1000px)": {
+      display: "none",
     },
   },
 });

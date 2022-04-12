@@ -3,7 +3,7 @@ import { createUseStyles } from "react-jss";
 import Image from "next/image";
 import Link from "next/link";
 import colors from "@/styles/colors";
-import LineStraight from "@/public/images/line-straight.svg";
+import lineWithCircle from "@/public/images/line-with-circle.png";
 import LeftBracket from "@/public/images/left-bracket-long.svg";
 import RightBracket from "@/public/images/right-bracket-long.svg";
 import avatar1 from "../../../public/images/avatar1.png";
@@ -19,7 +19,7 @@ const data = [
   },
   {
     key: 2,
-    name: "Derivatives Monke",
+    name: "Xation",
     socialMedia: "Twitter",
     image: avatar2,
   },
@@ -32,16 +32,13 @@ export default function Team() {
     <section className={classes.teamContainer}>
       <div className={classes.header}>
         <span className={classes.title}>TEAM</span>
-        <div className="outer-circle-small">
-          <div className="inner-circle-small"></div>
-        </div>
-        <LineStraight />
+        <Image src={lineWithCircle} />
       </div>
       <div className={classes.list}>
         {data.map((temp) => (
           <div key={temp.key} className={classes.listItem}>
             <Image
-              alt="Mountains"
+              alt="avatar"
               src={temp.image}
               objectFit="cover"
               quality={100}
@@ -73,6 +70,13 @@ const useStyles = createUseStyles({
       right: 111,
       left: 111,
     },
+    "@media screen and (max-width: 600px)": {
+      padding: {
+        right: 16,
+        left: 16,
+        bottom: 134,
+      },
+    },
   },
   header: {
     display: "flex",
@@ -80,9 +84,9 @@ const useStyles = createUseStyles({
     flexDirection: "row",
     alignItems: "center",
     marginBottom: 107,
-    "@media screen and (max-width: 1000px)": {
-      flexDirection: "column",
-      alignItems: "center",
+    width: "100%",
+    "@media screen and (max-width: 600px)": {
+      marginBottom: 64,
     },
   },
   title: {
@@ -92,12 +96,18 @@ const useStyles = createUseStyles({
     color: colors.whiteWithOpacity,
     textShadow: "0px 9px 9px rgba(208, 198, 247, 0.6)",
     marginRight: 24,
+    "@media screen and (max-width: 600px)": {
+      fontSize: 36,
+    },
   },
   list: {
     display: "flex",
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
+    "@media screen and (max-width: 600px)": {
+      flexDirection: "column",
+    },
   },
   listItem: {
     display: "flex",
@@ -105,6 +115,9 @@ const useStyles = createUseStyles({
     flexDirection: "column",
     marginRight: 50,
     marginLeft: 50,
+    "@media screen and (max-width: 600px)": {
+      marginBottom: 60,
+    },
   },
   listItemInfo: {
     display: "flex",
@@ -126,9 +139,15 @@ const useStyles = createUseStyles({
     "& span": {
       fontSize: 34,
       fontWeight: "bold",
+      "@media screen and (max-width: 600px)": {
+        fontSize: 26,
+      },
     },
     "& a": {
       fontSize: 28,
+      "@media screen and (max-width: 600px)": {
+        fontSize: 18,
+      },
     },
   },
 });
