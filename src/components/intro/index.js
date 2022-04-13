@@ -1,20 +1,28 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
+import { m } from "framer-motion";
 import Image from "next/image";
 import colors from "@/styles/colors";
 import LeftBracket from "@/public/images/left-bracket.svg";
 import RightBracket from "@/public/images/right-bracket.svg";
-import BgGlass from "@/public/images/bg-glass.svg";
+import bgGlass from "@/public/images/bg-glass.png";
 import bar from "@/public/images/bar.png";
 import ButtonBracket from "@/public/images/button-bracket.svg";
 import frames from "../../../public/images/frames.png";
+import { defaultTransition } from "@/utils/transitions";
 
 export default function Intro() {
   const classes = useStyles();
 
   return (
     <section className={classes.introContainer}>
-      <BgGlass className={classes.bg} />
+      <Image
+        alt="bgGlass"
+        src={bgGlass}
+        objectFit="cover"
+        layout="fill"
+        objectPosition="center"
+      />
       <Image
         alt="cards"
         src={frames}
@@ -30,8 +38,21 @@ export default function Intro() {
           <div>
             <span>Current Prize Pool</span>
           </div>
-          <span className={classes.textWithShadow}>$5,600,000</span>
-          <Image alt="cards" src={bar} objectFit="cover" />
+          <m.span
+            className={classes.textWithShadow}
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+              transition: {
+                ...defaultTransition,
+                delay: 0.3,
+              },
+            }}
+          >
+            $5,600,000
+          </m.span>
+          <Image alt="bar" src={bar} objectFit="cover" />
           <div>
             <LeftBracket />
             <span>10 winners $520,000 each </span>
@@ -80,10 +101,6 @@ const useStyles = createUseStyles({
         left: 16,
       },
     },
-  },
-  bg: {
-    position: "absolute",
-    top: 0,
   },
   info: {
     display: "flex",

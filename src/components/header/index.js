@@ -10,7 +10,7 @@ import { useWeb3React } from "@web3-react/core";
 
 const navbarMenu = [
   {
-    key: "#section-Home",
+    key: "./",
     title: "Home",
   },
   {

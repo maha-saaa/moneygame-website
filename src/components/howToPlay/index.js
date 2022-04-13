@@ -22,9 +22,17 @@ export default function HowToPlay() {
     <section className={classes.howToPlayContainer}>
       <div className={classes.header}>
         <Line />
-        <Image alt="PlayCardOne" src={coinLeft} />
-        <span className={classes.title}>HOW TO PLAY</span>
-        <Image alt="PlayCardOne" src={coinRight} />
+        <Image alt="coinLeft" src={coinLeft} />
+        <span
+          className={classes.title}
+          data-scroll
+          data-scroll-speed="2"
+          data-scroll-position="down"
+          data-scroll-direction="vertical"
+        >
+          HOW TO PLAY
+        </span>
+        <Image alt="coinRight" src={coinRight} />
         <Line />
       </div>
       <div className={classes.info}>
@@ -44,10 +52,24 @@ export default function HowToPlay() {
             </span>
           </div>
           <PlayLineLeft className={classes.firstPlayLine} />
-          <Image alt="PlayCardOne" src={playCardOne} />
+          <Image
+            alt="playCardOne"
+            src={playCardOne}
+            data-scroll
+            data-scroll-speed="2"
+            data-scroll-position="down"
+            data-scroll-direction="vertical"
+          />
         </div>
         <div className={classes.playRow}>
-          <Image alt="PlayCardOne" src={playCardTwo} />
+          <Image
+            alt="playCardTwo"
+            src={playCardTwo}
+            data-scroll
+            data-scroll-speed="2"
+            data-scroll-position="down"
+            data-scroll-direction="vertical"
+          />
           <PlayLineRight className={classes.secondPlayLine} />
           <div className={classes.leftSidedPlayRow}>
             <span className={classes.secondPlayRowTitle}>Determination</span>
@@ -83,10 +105,24 @@ export default function HowToPlay() {
             </span>
           </div>
           <PlayLineLeft className={classes.thirdPlayLine} />
-          <Image alt="PlayCardOne" src={playCardThree} />
+          <Image
+            alt="playCardThree"
+            src={playCardThree}
+            data-scroll
+            data-scroll-speed="2"
+            data-scroll-position="down"
+            data-scroll-direction="vertical"
+          />
         </div>
         <div className={classes.playRow}>
-          <Image alt="PlayCardOne" src={playCardFour} />
+          <Image
+            alt="playCardFour"
+            src={playCardFour}
+            data-scroll
+            data-scroll-speed="2"
+            data-scroll-position="down"
+            data-scroll-direction="vertical"
+          />
           <PlayLineRight className={classes.fourthPlayLine} />
           <div className={classes.leftSidedPlayRow}>
             <span className={classes.fourthPlayRowTitle}>Secondary Market</span>
@@ -108,7 +144,7 @@ export default function HowToPlay() {
           </div>
         </div>
         <div className={classes.playCol}>
-          <Image alt="PlayCardOne" src={lineNumberUp} />
+          <Image alt="lineNumberUp" src={lineNumberUp} />
           <span className={classes.centerPlayColTitle}>The Difference?</span>
           <span className={classes.centerPlayColDesc}>
             Unlike the traditional lottery games, ours is 100% provably fair,
@@ -127,44 +163,44 @@ export default function HowToPlay() {
           <div className="notched-rectengle-button">
             <span>Whitepaper</span>
           </div>
-          <Image alt="PlayCardOne" src={lineNumberDown} />
+          <Image alt="lineNumberDown" src={lineNumberDown} />
         </div>
       </div>
 
       <div className={classes.infoS}>
         <div className={classes.rowS}>
-          <Image alt="PlayCardOne" src={lineNumberUpS} />
+          <Image alt="lineNumberUpS" src={lineNumberUpS} />
           <span className={classes.lineNumber}>1</span>
           <span className={classes.rowTitleS}>MINT YOUR PASS</span>
           <span className={classes.rowDescS}>
             {`Get on the whitelist and mint your pass.\nYour minting funds go into the prize pool.`}
           </span>
-          <Image alt="PlayCardOne" src={playCardOne} />
+          <Image alt="playCardOne" src={playCardOne} />
         </div>
         <div className={classes.rowS}>
           <span className={classes.lineNumber}>2</span>
-          <Image alt="PlayCardOne" src={lineNumberUpS} />
+          <Image alt="lineNumberUpS" src={lineNumberUpS} />
           <span className={classes.rowTitleS}>Determination</span>
           <span className={classes.rowDescS}>
             {`Using Smart Contracts your pass is\n determined as a winner or loser. 
                 We can’t change this or know who the\n winners are.`}
           </span>
-          <Image alt="PlayCardOne" src={playCardTwo} />
+          <Image alt="playCardTwo" src={playCardTwo} />
         </div>
         <div className={classes.rowS}>
           <span className={classes.lineNumber}>3</span>
-          <Image alt="PlayCardOne" src={lineNumberUpS} />
+          <Image alt="lineNumberUpS" src={lineNumberUpS} />
           <span className={classes.rowTitleS}>Burn your Pass</span>
           <span className={classes.rowDescS}>
             {`Your passes status as winner or loser is only
                 determined when you burn the pass in the\n prize poll contract.
                 If it's revealed as a winner you claim your %\n of the jackpot ($5000,000)`}
           </span>
-          <Image alt="PlayCardOne" src={playCardThree} />
+          <Image alt="playCardThree" src={playCardThree} />
         </div>
         <div className={classes.rowS}>
           <span className={classes.lineNumber}>4</span>
-          <Image alt="PlayCardOne" src={lineNumberUpS} />
+          <Image alt="lineNumberUpS" src={lineNumberUpS} />
           <span className={classes.rowTitleS}>Secondary Market</span>
           <span className={classes.rowDescS}>
             {`Passes can also be sold on secondary, what
@@ -173,10 +209,10 @@ export default function HowToPlay() {
                 selling your winner on secondary market or
                 will you try to claim the prize yourself?`}
           </span>
-          <Image alt="PlayCardOne" src={playCardFour} />
+          <Image alt="playCardFour" src={playCardFour} />
         </div>
         <div className={classes.rowS}>
-          <Image alt="PlayCardOne" src={lineNumberUp} />
+          <Image alt="lineNumberUp" src={lineNumberUp} />
           <span className={classes.lastRowTitleS}>The Difference?</span>
           <span className={classes.rowDescS}>
             Unlike the traditional lottery games, ours is 100% provably fair,
@@ -195,7 +231,7 @@ export default function HowToPlay() {
           <div className="notched-rectengle-button">
             <span>Whitepaper</span>
           </div>
-          <Image alt="PlayCardOne" src={lineNumberDown} />
+          <Image alt="lineNumberDown" src={lineNumberDown} />
         </div>
       </div>
     </section>

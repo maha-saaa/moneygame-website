@@ -32,11 +32,17 @@ export default function Team() {
     <section className={classes.teamContainer}>
       <div className={classes.header}>
         <span className={classes.title}>TEAM</span>
-        <Image src={lineWithCircle} />
+        <Image src={lineWithCircle} alt="lineWithCircle" />
       </div>
       <div className={classes.list}>
         {data.map((temp) => (
-          <div key={temp.key} className={classes.listItem}>
+          <div
+            key={temp.key}
+            className={classes.listItem}
+            data-scroll
+            data-scroll-speed="2"
+            data-scroll-direction="horizontal"
+          >
             <Image
               alt="avatar"
               src={temp.image}

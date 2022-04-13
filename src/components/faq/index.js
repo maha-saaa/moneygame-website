@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { createUseStyles } from "react-jss";
 import colors from "@/styles/colors";
 import Accordion from "@/components/accordion";
