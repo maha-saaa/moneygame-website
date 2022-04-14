@@ -6,7 +6,6 @@ import colors from "@/styles/colors";
 import LeftBracket from "@/public/images/left-bracket.svg";
 import RightBracket from "@/public/images/right-bracket.svg";
 import bgGlass from "@/public/images/bg-glass.png";
-import bar from "@/public/images/bar.png";
 import ButtonBracket from "@/public/images/button-bracket.svg";
 import frames from "../../../public/images/frames.png";
 import { defaultTransition } from "@/utils/transitions";
@@ -52,7 +51,6 @@ export default function Intro() {
           >
             $5,600,000
           </m.span>
-          <Image alt="bar" src={bar} objectFit="cover" />
           <div>
             <LeftBracket />
             <span>10 winners $520,000 each </span>
@@ -150,7 +148,7 @@ const useStyles = createUseStyles({
       },
     },
 
-    "& div:nth-child(4)": {
+    "& div:nth-child(3)": {
       display: "flex",
       flexDirection: "row",
       justifyItems: "center",

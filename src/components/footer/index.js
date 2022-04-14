@@ -1,14 +1,16 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
+import Image from "next/image";
 import colors from "@/styles/colors";
-import HorizontalLine from "@/public/images/horizontal-line.svg";
+import footerLineUp from "@/public/images/footer-line-up.png";
+import footerLineDown from "@/public/images/footer-line-down.png";
 
 export default function Footer() {
   const classes = useStyles();
 
   return (
     <footer className={classes.footerContainer}>
-      <HorizontalLine />
+      <Image alt="footerLineUp" src={footerLineUp} />
       <div className={classes.contact}>
         {/* <span
           className={classes.title}
@@ -169,7 +171,7 @@ export default function Footer() {
           <span style={{ color: colors.textPurple }}>Reach out to Us</span>
         </div>
       </div>
-      <HorizontalLine />
+      <Image alt="footerLineDown" src={footerLineDown} />
       <span className={classes.bottomText}>A PROJECT BY FND</span>
     </footer>
   );

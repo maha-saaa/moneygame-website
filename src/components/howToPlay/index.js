@@ -11,8 +11,10 @@ import playCardOne from "@/public/images/play-card-one.png";
 import playCardTwo from "@/public/images/play-card-two.png";
 import playCardThree from "@/public/images/play-card-three.png";
 import playCardFour from "@/public/images/play-card-four.png";
-import PlayLineLeft from "@/public/images/play-line-left.svg";
-import PlayLineRight from "@/public/images/play-line-right.svg";
+import playCardOneS from "@/public/images/play-card-one-s.png";
+import playCardTwoS from "@/public/images/play-card-two-s.png";
+import playCardThreeS from "@/public/images/play-card-three-s.png";
+import playCardFourS from "@/public/images/play-card-four-s.png";
 import Line from "@/public/images/line.svg";
 
 export default function HowToPlay() {
@@ -37,21 +39,6 @@ export default function HowToPlay() {
       </div>
       <div className={classes.info}>
         <div className={classes.playRow}>
-          <div
-            className="outer-circle"
-            style={{ position: "absolute", left: 110, bottom: 160 }}
-          >
-            <div className="inner-circle">
-              <span>1</span>
-            </div>
-          </div>
-          <div className={classes.leftSidedPlayRow}>
-            <span className={classes.firstPlayRowTitle}>MINT YOUR PASS</span>
-            <span className={classes.firstPlayRowDesc}>
-              {`Get on the whitelist and mint your pass.\nYour minting funds go into the prize pool.`}
-            </span>
-          </div>
-          <PlayLineLeft className={classes.firstPlayLine} />
           <Image
             alt="playCardOne"
             src={playCardOne}
@@ -70,41 +57,8 @@ export default function HowToPlay() {
             data-scroll-position="down"
             data-scroll-direction="vertical"
           />
-          <PlayLineRight className={classes.secondPlayLine} />
-          <div className={classes.leftSidedPlayRow}>
-            <span className={classes.secondPlayRowTitle}>Determination</span>
-            <span className={classes.secondPlayRowDesc}>
-              {`Using Smart Contracts your pass is\n determined as a winner or loser. 
-                We can’t change this or know who the\n winners are.`}
-            </span>
-          </div>
-          <div
-            className="outer-circle"
-            style={{ position: "absolute", right: 103, bottom: 90 }}
-          >
-            <div className="inner-circle">
-              <span>2</span>
-            </div>
-          </div>
         </div>
         <div className={classes.playRow}>
-          <div
-            className="outer-circle"
-            style={{ position: "absolute", left: 107, bottom: 120 }}
-          >
-            <div className="inner-circle">
-              <span>3</span>
-            </div>
-          </div>
-          <div className={classes.leftSidedPlayRow}>
-            <span className={classes.thirdPlayRowTitle}>Burn your Pass</span>
-            <span className={classes.thirdPlayRowDesc}>
-              {`Your passes status as winner or loser is only
-                determined when you burn the pass in the\n prize poll contract.
-                If it's revealed as a winner you claim your %\n of the jackpot ($5000,000)`}
-            </span>
-          </div>
-          <PlayLineLeft className={classes.thirdPlayLine} />
           <Image
             alt="playCardThree"
             src={playCardThree}
@@ -123,25 +77,6 @@ export default function HowToPlay() {
             data-scroll-position="down"
             data-scroll-direction="vertical"
           />
-          <PlayLineRight className={classes.fourthPlayLine} />
-          <div className={classes.leftSidedPlayRow}>
-            <span className={classes.fourthPlayRowTitle}>Secondary Market</span>
-            <span className={classes.fourthPlayRowDesc}>
-              {`Passes can also be sold on secondary, what
-                will happen if there is only 10 passes left
-                and still a prize to claim, will you risk
-                selling your winner on secondary market or
-                will you try to claim the prize yourself?`}
-            </span>
-          </div>
-          <div
-            className="outer-circle"
-            style={{ position: "absolute", right: 104, bottom: 170 }}
-          >
-            <div className="inner-circle">
-              <span>4</span>
-            </div>
-          </div>
         </div>
         <div className={classes.playCol}>
           <Image alt="lineNumberUp" src={lineNumberUp} />
@@ -175,7 +110,7 @@ export default function HowToPlay() {
           <span className={classes.rowDescS}>
             {`Get on the whitelist and mint your pass.\nYour minting funds go into the prize pool.`}
           </span>
-          <Image alt="playCardOne" src={playCardOne} />
+          <Image alt="playCardOneS" src={playCardOneS} />
         </div>
         <div className={classes.rowS}>
           <span className={classes.lineNumber}>2</span>
@@ -185,7 +120,7 @@ export default function HowToPlay() {
             {`Using Smart Contracts your pass is\n determined as a winner or loser. 
                 We can’t change this or know who the\n winners are.`}
           </span>
-          <Image alt="playCardTwo" src={playCardTwo} />
+          <Image alt="playCardTwoS" src={playCardTwoS} />
         </div>
         <div className={classes.rowS}>
           <span className={classes.lineNumber}>3</span>
@@ -196,7 +131,7 @@ export default function HowToPlay() {
                 determined when you burn the pass in the\n prize poll contract.
                 If it's revealed as a winner you claim your %\n of the jackpot ($5000,000)`}
           </span>
-          <Image alt="playCardThree" src={playCardThree} />
+          <Image alt="playCardThreeS" src={playCardThreeS} />
         </div>
         <div className={classes.rowS}>
           <span className={classes.lineNumber}>4</span>
@@ -209,7 +144,7 @@ export default function HowToPlay() {
                 selling your winner on secondary market or
                 will you try to claim the prize yourself?`}
           </span>
-          <Image alt="playCardFour" src={playCardFour} />
+          <Image alt="playCardFourS" src={playCardFourS} />
         </div>
         <div className={classes.rowS}>
           <Image alt="lineNumberUp" src={lineNumberUp} />
@@ -263,7 +198,7 @@ const useStyles = createUseStyles({
       left: 40,
       right: 40,
     },
-    "@media screen and (max-width: 1000px)": {
+    "@media screen and (max-width: 1200px)": {
       fontSize: 36,
       margin: {
         left: 0,
@@ -274,14 +209,15 @@ const useStyles = createUseStyles({
   info: {
     display: "flex",
     flexDirection: "column",
-    "@media screen and (max-width: 1000px)": {
+    "@media screen and (max-width: 1200px)": {
       display: "none",
     },
   },
   playRow: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "center",
+    alignItems: "center",
     padding: {
       left: 100,
       right: 100,
@@ -300,17 +236,13 @@ const useStyles = createUseStyles({
     marginTop: 100,
   },
   playTitle: {
-    fontSize: 44,
+    fontSize: 32,
     fontWeight: "bold",
     color: colors.whiteWithOpacity,
   },
   playDesc: {
-    fontSize: 24,
+    fontSize: 20,
     color: colors.textPurpleWithOpacity,
-  },
-  leftSidedPlayRow: {
-    display: "flex",
-    flexDirection: "column",
   },
   centerPlayColTitle: {
     composes: ["$playTitle"],
@@ -322,103 +254,20 @@ const useStyles = createUseStyles({
     textAlign: "center",
     marginBottom: 40,
   },
-  firstPlayRowTitle: {
-    composes: ["$playTitle"],
-    textAlign: "start",
-    position: "absolute",
-    top: 100,
-    left: 300,
-  },
-  firstPlayRowDesc: {
-    composes: ["$playDesc"],
-    textAlign: "start",
-    whiteSpace: "pre-line",
-    position: "absolute",
-    top: 230,
-    left: 300,
-  },
-  firstPlayLine: {
-    position: "absolute",
-    right: 518,
-    top: 184,
-  },
-
-  secondPlayRowTitle: {
-    composes: ["$playTitle"],
-    textAlign: "start",
-    position: "absolute",
-    top: 180,
-    right: 440,
-  },
-  secondPlayRowDesc: {
-    composes: ["$playDesc"],
-    textAlign: "start",
-    whiteSpace: "pre-line",
-    position: "absolute",
-    top: 300,
-    right: 320,
-  },
-  secondPlayLine: {
-    position: "absolute",
-    left: 535,
-    top: 263,
-  },
-
-  thirdPlayRowTitle: {
-    composes: ["$playTitle"],
-    textAlign: "start",
-    position: "absolute",
-    top: 150,
-    left: 300,
-  },
-  thirdPlayRowDesc: {
-    composes: ["$playDesc"],
-    textAlign: "start",
-    whiteSpace: "pre-line",
-    position: "absolute",
-    top: 280,
-    left: 300,
-  },
-  thirdPlayLine: {
-    position: "absolute",
-    right: 518,
-    top: 230,
-  },
-
-  fourthPlayRowTitle: {
-    composes: ["$playTitle"],
-    textAlign: "start",
-    position: "absolute",
-    top: 110,
-    right: 440,
-  },
-  fourthPlayRowDesc: {
-    composes: ["$playDesc"],
-    textAlign: "start",
-    whiteSpace: "pre-line",
-    position: "absolute",
-    top: 220,
-    right: 330,
-  },
-  fourthPlayLine: {
-    position: "absolute",
-    left: 534,
-    top: 184,
-  },
   infoS: {
-    "@media screen and (max-width: 1000px)": {
+    "@media screen and (max-width: 1200px)": {
       width: "90%",
       padding: {
         left: 16,
         right: 16,
       },
     },
-    "@media screen and (min-width: 1000px)": {
+    "@media screen and (min-width: 1200px)": {
       display: "none",
     },
   },
   rowS: {
-    "@media screen and (max-width: 1000px)": {
+    "@media screen and (max-width: 1200px)": {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
@@ -427,7 +276,7 @@ const useStyles = createUseStyles({
     },
   },
   rowTitleS: {
-    "@media screen and (max-width: 1000px)": {
+    "@media screen and (max-width: 1200px)": {
       fontSize: 20,
       fontWeight: "bold",
       textAlign: "center",
@@ -437,7 +286,7 @@ const useStyles = createUseStyles({
     },
   },
   rowDescS: {
-    "@media screen and (max-width: 1000px)": {
+    "@media screen and (max-width: 1200px)": {
       fontSize: 16,
       textAlign: "center",
       color: colors.textPurpleWithOpacity,
@@ -445,7 +294,7 @@ const useStyles = createUseStyles({
     },
   },
   lastRowTitleS: {
-    "@media screen and (max-width: 1000px)": {
+    "@media screen and (max-width: 1200px)": {
       fontSize: 28,
       fontWeight: "bold",
       textAlign: "center",
@@ -454,7 +303,7 @@ const useStyles = createUseStyles({
     },
   },
   playCardS: {
-    "@media screen and (min-width: 1000px)": {
+    "@media screen and (min-width: 1200px)": {
       display: "none",
     },
   },

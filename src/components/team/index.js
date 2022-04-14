@@ -89,6 +89,7 @@ const useStyles = createUseStyles({
     flex: 1,
     flexDirection: "row",
     alignItems: "center",
+    justifyContent: "center",
     marginBottom: 107,
     width: "100%",
     "@media screen and (max-width: 600px)": {

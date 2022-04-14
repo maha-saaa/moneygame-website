@@ -33,7 +33,7 @@ const useStyles = createUseStyles({
     left: 0,
   },
   title: {
-    fontSize: 96,
+    fontSize: 64,
     fontStyle: "italic",
     fontWeight: "bold",
     color: colors.whiteWithOpacity,
