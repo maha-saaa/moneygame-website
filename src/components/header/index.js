@@ -1,5 +1,6 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
+import Link from "next/link";
 import colors from "@/styles/colors";
 import Logo from "@/public/images/logo.svg";
 import OpenSea from "@/public/images/open-sea.svg";
@@ -76,19 +77,31 @@ export default function Header() {
       <div className={classes.access}>
         <ul>
           <li>
-            <a href={"./"}>
+            <Link
+              href={"https://opensea.io/"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <OpenSea />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href={"./"}>
+            <Link
+              href={"https://twitter.com/Money_GameNFT"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Twitter />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href={"./"}>
+            <Link
+              href={"https://discord.gg/PDBjdqYbCe"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Discord />
-            </a>
+            </Link>
           </li>
           <li>
             <div

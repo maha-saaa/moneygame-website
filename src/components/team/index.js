@@ -14,13 +14,14 @@ const data = [
     key: 1,
     name: "Derivatives Monke",
     socialMedia: "Twitter",
-    url: "false",
+    url: "https://twitter.com/Derivatives_Ape",
     image: avatar1,
   },
   {
     key: 2,
     name: "Xation",
     socialMedia: "Twitter",
+    url: "https://twitter.com/Xation5",
     image: avatar2,
   },
 ];
@@ -53,7 +54,9 @@ export default function Team() {
               <LeftBracket />
               <div className={classes.listItemContact}>
                 <span>{temp.name}</span>
-                <Link href="">{temp.socialMedia}</Link>
+                <Link href={temp.url} target="_blank" rel="noopener noreferrer">
+                  {temp.socialMedia}
+                </Link>
               </div>
               <RightBracket />
             </div>
