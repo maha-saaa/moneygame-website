@@ -47,7 +47,7 @@ export default Accordion;
 
 const useStyles = createUseStyles({
   question: {
-    fontSize: 28,
+    fontSize: 24,
     color: colors.whiteWithOpacity,
     display: "flex",
     justifyContent: "flex-start",
@@ -57,7 +57,7 @@ const useStyles = createUseStyles({
     },
   },
   answer: {
-    fontSize: 20,
+    fontSize: 18,
     color: colors.whiteWithOpacity,
     display: "flex",
     justifyContent: "flex-start",

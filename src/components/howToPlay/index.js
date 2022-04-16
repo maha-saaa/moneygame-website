@@ -199,7 +199,7 @@ const useStyles = createUseStyles({
     alignItems: "center",
   },
   title: {
-    fontSize: 60,
+    fontSize: 52,
     fontStyle: "italic",
     fontWeight: "bold",
     color: colors.whiteWithOpacity,
@@ -241,8 +241,8 @@ const useStyles = createUseStyles({
     flexDirection: "column",
     alignItems: "center",
     padding: {
-      left: 135,
-      right: 135,
+      left: 200,
+      right: 200,
     },
     marginTop: 100,
   },
@@ -252,7 +252,7 @@ const useStyles = createUseStyles({
     color: colors.whiteWithOpacity,
   },
   playDesc: {
-    fontSize: 20,
+    fontSize: 18,
     color: colors.textPurpleWithOpacity,
   },
   centerPlayColTitle: {

@@ -227,7 +227,7 @@ a {
   /* text-shadow: 0px 0px 15px var(--notched-border-color); */
   font-size: 24px;
   cursor: pointer;
-  color: rgba(255, 255, 255, 1);
+  color: "white";
 }
 
 .notched-rectengle-card {

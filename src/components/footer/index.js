@@ -201,20 +201,20 @@ const useStyles = createUseStyles({
     },
   },
   title: {
-    fontSize: 60,
+    fontSize: 52,
     fontWeight: "bold",
     fontStyle: "italic",
     color: colors.whiteWithOpacity,
     textShadow: "0px 9px 9px rgba(208, 198, 247, 0.6)",
     textAlign: "center",
-    marginBottom: 33,
+    marginBottom: 4,
     "@media screen and (max-width: 1000px)": {
       fontSize: 30,
       marginBottom: 27,
     },
   },
   desc: {
-    fontSize: 24,
+    fontSize: 22,
     color: colors.textPurpleWithOpacity,
     textAlign: "center",
     marginBottom: 52,

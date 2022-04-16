@@ -83,8 +83,8 @@ const useStyles = createUseStyles({
     alignItems: "center",
     justifyItems: "center",
     padding: {
-      right: 111,
-      left: 111,
+      right: 200,
+      left: 200,
     },
     "@media screen and (max-width: 600px)": {
       padding: {
@@ -107,7 +107,7 @@ const useStyles = createUseStyles({
     },
   },
   title: {
-    fontSize: 60,
+    fontSize: 52,
     fontWeight: "bold",
     fontStyle: "italic",
     color: colors.whiteWithOpacity,
@@ -161,7 +161,7 @@ const useStyles = createUseStyles({
       },
     },
     "& a": {
-      fontSize: 26,
+      fontSize: 24,
       "@media screen and (max-width: 600px)": {
         fontSize: 18,
       },

@@ -21,6 +21,7 @@ export default function Intro() {
         objectFit="cover"
         layout="fill"
         objectPosition="center"
+        priority
       />
       <Image
         alt="cards"

@@ -15,7 +15,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setPreloader(false);
-    }, 5000);
+    }, 6000);
   }, []);
 
   return preloader ? (
@@ -48,7 +48,11 @@ export default function Home() {
             exit="exit"
             style={{ backgroundColor: "#08080E" }}
           >
-            <div data-scroll-container ref={containerRef}>
+            <div
+              data-scroll-container
+              ref={containerRef}
+              // onLoad={() => setPreloader(false)}
+            >
               <Content />
             </div>
           </m.main>
