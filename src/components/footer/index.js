@@ -1,5 +1,6 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
+import { m } from "framer-motion";
 import Image from "next/image";
 import colors from "@/styles/colors";
 import footerLineUp from "@/public/images/footer-line-up.png";
@@ -167,9 +168,14 @@ export default function Footer() {
         <span
           className={classes.desc}
         >{`Have an idea? We’d love to hear it.`}</span>
-        <div className="notched-rectengle-button">
+        <m.div
+          className="notched-rectengle-button-3"
+          whileHover={{
+            scale: 1.1,
+          }}
+        >
           <span style={{ color: colors.textPurple }}>Reach out to Us</span>
-        </div>
+        </m.div>
       </div>
       <Image alt="footerLineDown" src={footerLineDown} />
       <span className={classes.bottomText}>A PROJECT BY FND</span>
@@ -203,7 +209,7 @@ const useStyles = createUseStyles({
     textAlign: "center",
     marginBottom: 33,
     "@media screen and (max-width: 1000px)": {
-      fontSize: 36,
+      fontSize: 30,
       marginBottom: 27,
     },
   },

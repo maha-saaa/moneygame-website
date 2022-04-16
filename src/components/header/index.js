@@ -1,6 +1,6 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
-import Link from "next/link";
+import { motion } from "framer-motion";
 import colors from "@/styles/colors";
 import Logo from "@/public/images/logo.svg";
 import OpenSea from "@/public/images/open-sea.svg";
@@ -62,10 +62,15 @@ export default function Header() {
     <header className={classes.headerContainer}>
       <div className={classes.menu}>
         <ul>
-          {navbarMenu?.map((temp) => (
-            <li key={temp.key}>
+          {navbarMenu?.map((temp, index) => (
+            <motion.li
+              key={temp.key}
+              initial={{ x: -50 }}
+              animate={{ x: 10 }}
+              transition={{ ease: "easeOut", duration: 1, delay: 0.4 * index }}
+            >
               <a href={temp.key}>{temp.title}</a>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </div>
@@ -76,40 +81,55 @@ export default function Header() {
 
       <div className={classes.access}>
         <ul>
-          <li>
-            <Link
+          <motion.li
+            initial={{ x: 150 }}
+            animate={{ x: 10 }}
+            transition={{ ease: "easeOut", duration: 1, delay: 0}}
+          >
+            <a
               href={"https://opensea.io/"}
               target="_blank"
               rel="noopener noreferrer"
             >
               <OpenSea />
-            </Link>
-          </li>
-          <li>
-            <Link
+            </a>
+          </motion.li>
+          <motion.li
+            initial={{ x: 150 }}
+            animate={{ x: 10 }}
+            transition={{ ease: "easeOut", duration: 1, delay: 0.4 }}
+          >
+            <a
               href={"https://twitter.com/Money_GameNFT"}
               target="_blank"
               rel="noopener noreferrer"
             >
               <Twitter />
-            </Link>
-          </li>
-          <li>
-            <Link
+            </a>
+          </motion.li>
+          <motion.li
+            initial={{ x: 150 }}
+            animate={{ x: 10 }}
+            transition={{ ease: "easeOut", duration: 1, delay: 0.8 }}
+          >
+            <a
               href={"https://discord.gg/PDBjdqYbCe"}
               target="_blank"
               rel="noopener noreferrer"
             >
               <Discord />
-            </Link>
-          </li>
+            </a>
+          </motion.li>
           <li>
-            <div
+            <motion.div
               className="notched-rectengle-button"
               onClick={active ? disconnect : connect}
+              whileHover={{
+                scale: 1.1,
+              }}
             >
               {!active ? <span>Connect Wallet</span> : <span>Disconnect</span>}
-            </div>
+            </motion.div>
           </li>
         </ul>
       </div>

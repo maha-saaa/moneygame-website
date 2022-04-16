@@ -50,7 +50,7 @@ const useStyles = createUseStyles({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    paddingBottom: 312,
+    paddingBottom: 300,
     "@media screen and (max-width: 600px)": {
       paddingBottom: 173,
     },

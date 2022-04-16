@@ -44,7 +44,7 @@ const useStyles = createUseStyles({
       bottom: 10,
     },
     "@media screen and (max-width: 1000px)": {
-      fontSize: 64,
+      fontSize: 34,
     },
   },
 });

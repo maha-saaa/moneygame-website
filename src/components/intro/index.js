@@ -56,9 +56,14 @@ export default function Intro() {
             <span>10 winners $520,000 each </span>
             <RightBracket />
           </div>
-          <div className="notched-rectengle-button">
+          <m.div
+            className="notched-rectengle-button-2"
+            whileHover={{
+              scale: 1.1,
+            }}
+          >
             <span>MINT</span>
-          </div>
+          </m.div>
         </div>
         <div className={classes.rightSec}>
           <div className={classes.rightSecTextContainer}>
@@ -91,7 +96,7 @@ const useStyles = createUseStyles({
       right: 111,
       left: 111,
     },
-    marginBottom: 180,
+    marginBottom: 300,
     color: colors.textPurple,
     "@media screen and (max-width: 1000px)": {
       padding: {

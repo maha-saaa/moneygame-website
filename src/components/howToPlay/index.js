@@ -1,5 +1,6 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
+import { m } from "framer-motion";
 import Image from "next/image";
 import colors from "@/styles/colors";
 import coinLeft from "@/public/images/coin-left.png";
@@ -95,9 +96,14 @@ export default function HowToPlay() {
             charge. If you want to read more about the pass and also see more
             technical details, checkout our whitepaper
           </span>
-          <div className="notched-rectengle-button">
+          <m.div
+            className="notched-rectengle-button-2"
+            whileHover={{
+              scale: 1.1,
+            }}
+          >
             <span>Whitepaper</span>
-          </div>
+          </m.div>
           <Image alt="lineNumberDown" src={lineNumberDown} />
         </div>
       </div>
@@ -163,9 +169,14 @@ export default function HowToPlay() {
             charge. If you want to read more about the pass and also see more
             technical details, checkout our whitepaper
           </span>
-          <div className="notched-rectengle-button">
+          <m.div
+            className="notched-rectengle-button-2"
+            whileHover={{
+              scale: 1.1,
+            }}
+          >
             <span>Whitepaper</span>
-          </div>
+          </m.div>
           <Image alt="lineNumberDown" src={lineNumberDown} />
         </div>
       </div>
@@ -179,7 +190,7 @@ const useStyles = createUseStyles({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    marginBottom: 180,
+    marginBottom: 300,
   },
   header: {
     display: "flex",
@@ -222,7 +233,7 @@ const useStyles = createUseStyles({
       left: 100,
       right: 100,
     },
-    marginBottom: 30,
+    marginBottom: 100,
     position: "relative",
   },
   playCol: {

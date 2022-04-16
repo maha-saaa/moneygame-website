@@ -20,15 +20,14 @@ a {
 }
 
 @font-face {
-  font-family: 'PTSans';
-  src: url('../../public/fonts/PTSans-Bold.ttf');
-  src: url('../../public/fonts/PTSans-BoldItalic.ttf');
-  src: url('../../public/fonts/PTSans-Italic.ttf');
-  src: url('../../public/fonts/PTSans-Regular.ttf');
+  font-family: "PTSans";
+  src: url("../../public/fonts/PTSans-Bold.ttf");
+  src: url("../../public/fonts/PTSans-BoldItalic.ttf");
+  src: url("../../public/fonts/PTSans-Italic.ttf");
+  src: url("../../public/fonts/PTSans-Regular.ttf");
   font-weight: 400;
   font-style: normal;
-  }
-
+}
 
 .notched-rectengle-button {
   --default-px-size: 0px;
@@ -40,27 +39,46 @@ a {
   width: 134px;
   height: 40px;
   border: 1px solid var(--notched-border-color);
-  background: linear-gradient(45deg,
-      var(--notched-border-color) 0 var(--notched-border-size),
-      transparent 0) bottom left / 50% 50%,
-    linear-gradient(-45deg,
-      var(--notched-border-color) 0 var(--notched-border-size),
-      transparent 0) bottom right/50% 50%,
-    linear-gradient(130deg,
-      var(--notched-border-color) 0 calc(var(--notched-scale, var(--default-px-size)) + var(--notched-border-size)),
-      transparent 0) top left / 50% 50%,
-    linear-gradient(-135deg,
-      var(--notched-border-color) 0 var(--notched-border-size),
-      transparent 0) top right / 50% 50%,
-      linear-gradient(rgba(208, 198, 247, 0.3),rgba(248, 180, 252, 0.3));
+  background: linear-gradient(
+        45deg,
+        var(--notched-border-color) 0 var(--notched-border-size),
+        transparent 0
+      )
+      bottom left / 50% 50%,
+    linear-gradient(
+        -45deg,
+        var(--notched-border-color) 0 var(--notched-border-size),
+        transparent 0
+      )
+      bottom right/50% 50%,
+    linear-gradient(
+        130deg,
+        var(--notched-border-color) 0
+          calc(
+            var(--notched-scale, var(--default-px-size)) +
+              var(--notched-border-size)
+          ),
+        transparent 0
+      )
+      top left / 50% 50%,
+    linear-gradient(
+        -135deg,
+        var(--notched-border-color) 0 var(--notched-border-size),
+        transparent 0
+      )
+      top right / 50% 50%,
+    transparent;
 
   background-origin: border-box;
   background-repeat: no-repeat;
   -webkit-mask: linear-gradient(45deg, transparent 0 0, #000 0) bottom left,
     linear-gradient(-45deg, transparent 0 0, #000 0) bottom right,
-    linear-gradient(130deg,
-      transparent 0 var(--notched-scale, var(--default-px-size)),
-      #000 0) top left,
+    linear-gradient(
+        130deg,
+        transparent 0 var(--notched-scale, var(--default-px-size)),
+        #000 0
+      )
+      top left,
     linear-gradient(-135deg, transparent 0 0, #000 0) top right;
   -webkit-mask-size: 50.5% 50.5%;
   -webkit-mask-repeat: no-repeat;
@@ -74,6 +92,140 @@ a {
   width: 100%;
   /* text-shadow: 0px 0px 15px var(--notched-border-color); */
   font-size: 16px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 1);
+}
+
+.notched-rectengle-button-2 {
+  --default-px-size: 0px;
+  --notched-border-color: rgb(189, 181, 222);
+  --notched-scale: 12px;
+  --notched-border-size: 1px;
+  /* filter: drop-shadow(0px 0px 5px rgba(189, 181, 222, 0.7)); */
+  display: flex;
+  width: 158px;
+  height: 48px;
+  border: 1px solid var(--notched-border-color);
+  background: linear-gradient(
+        45deg,
+        var(--notched-border-color) 0 var(--notched-border-size),
+        transparent 0
+      )
+      bottom left / 50% 50%,
+    linear-gradient(
+        -45deg,
+        var(--notched-border-color) 0 var(--notched-border-size),
+        transparent 0
+      )
+      bottom right/50% 50%,
+    linear-gradient(
+        130deg,
+        var(--notched-border-color) 0
+          calc(
+            var(--notched-scale, var(--default-px-size)) +
+              var(--notched-border-size)
+          ),
+        transparent 0
+      )
+      top left / 50% 50%,
+    linear-gradient(
+        -135deg,
+        var(--notched-border-color) 0 var(--notched-border-size),
+        transparent 0
+      )
+      top right / 50% 50%,
+    linear-gradient(rgba(208, 198, 247, 0.3), rgba(248, 180, 252, 0.3));
+
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  -webkit-mask: linear-gradient(45deg, transparent 0 0, #000 0) bottom left,
+    linear-gradient(-45deg, transparent 0 0, #000 0) bottom right,
+    linear-gradient(
+        130deg,
+        transparent 0 var(--notched-scale, var(--default-px-size)),
+        #000 0
+      )
+      top left,
+    linear-gradient(-135deg, transparent 0 0, #000 0) top right;
+  -webkit-mask-size: 50.5% 50.5%;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.notched-rectengle-button-2 span {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  /* text-shadow: 0px 0px 15px var(--notched-border-color); */
+  font-size: 22px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 1);
+}
+
+.notched-rectengle-button-3 {
+  --default-px-size: 0px;
+  --notched-border-color: rgb(189, 181, 222);
+  --notched-scale: 16px;
+  --notched-border-size: 1px;
+  /* filter: drop-shadow(0px 0px 5px rgba(189, 181, 222, 0.7)); */
+  display: flex;
+  width: 224px;
+  height: 64px;
+  border: 1px solid var(--notched-border-color);
+  background: linear-gradient(
+        45deg,
+        var(--notched-border-color) 0 var(--notched-border-size),
+        transparent 0
+      )
+      bottom left / 50% 50%,
+    linear-gradient(
+        -45deg,
+        var(--notched-border-color) 0 var(--notched-border-size),
+        transparent 0
+      )
+      bottom right/50% 50%,
+    linear-gradient(
+        130deg,
+        var(--notched-border-color) 0
+          calc(
+            var(--notched-scale, var(--default-px-size)) +
+              var(--notched-border-size)
+          ),
+        transparent 0
+      )
+      top left / 50% 50%,
+    linear-gradient(
+        -135deg,
+        var(--notched-border-color) 0 var(--notched-border-size),
+        transparent 0
+      )
+      top right / 50% 50%,
+    linear-gradient(rgba(208, 198, 247, 0.3), rgba(248, 180, 252, 0.3));
+
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  -webkit-mask: linear-gradient(45deg, transparent 0 0, #000 0) bottom left,
+    linear-gradient(-45deg, transparent 0 0, #000 0) bottom right,
+    linear-gradient(
+        130deg,
+        transparent 0 var(--notched-scale, var(--default-px-size)),
+        #000 0
+      )
+      top left,
+    linear-gradient(-135deg, transparent 0 0, #000 0) top right;
+  -webkit-mask-size: 50.5% 50.5%;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.notched-rectengle-button-3 span {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  /* text-shadow: 0px 0px 15px var(--notched-border-color); */
+  font-size: 24px;
   cursor: pointer;
   color: rgba(255, 255, 255, 1);
 }
@@ -93,75 +245,47 @@ a {
   padding: 24px 28px 24px 24px;
   cursor: pointer;
   border: 1px solid var(--notched-border-color);
-  background: linear-gradient(45deg,
-      var(--notched-border-color) 0 var(--notched-border-size),
-      transparent 0) bottom left / 50% 50%,
-    linear-gradient(-45deg,
-      var(--notched-border-color) 0 calc(var(--notched-scale, var(--default-px-size)) + var(--notched-border-size)),
-      transparent 0) bottom right/50% 50%,
-    linear-gradient(130deg,
-      var(--notched-border-color) 0 var(--notched-border-size),
-      transparent 0) top left / 50% 50%,
-    linear-gradient(-135deg,
-      var(--notched-border-color) 0 var(--notched-border-size),
-      transparent 0) top right / 50% 50%,
-      linear-gradient(rgba(208, 198, 247, 0.1),rgba(248, 180, 252, 0.1));
+  background: linear-gradient(
+        45deg,
+        var(--notched-border-color) 0 var(--notched-border-size),
+        transparent 0
+      )
+      bottom left / 50% 50%,
+    linear-gradient(
+        -45deg,
+        var(--notched-border-color) 0
+          calc(
+            var(--notched-scale, var(--default-px-size)) +
+              var(--notched-border-size)
+          ),
+        transparent 0
+      )
+      bottom right/50% 50%,
+    linear-gradient(
+        130deg,
+        var(--notched-border-color) 0 var(--notched-border-size),
+        transparent 0
+      )
+      top left / 50% 50%,
+    linear-gradient(
+        -135deg,
+        var(--notched-border-color) 0 var(--notched-border-size),
+        transparent 0
+      )
+      top right / 50% 50%,
+    linear-gradient(rgba(208, 198, 247, 0.1), rgba(248, 180, 252, 0.1));
 
   background-origin: border-box;
   background-repeat: no-repeat;
   -webkit-mask: linear-gradient(45deg, transparent 0 0, #000 0) bottom left,
-    linear-gradient(-45deg, transparent 0 var(--notched-scale, var(--default-px-size)), #000 0) bottom right,
-    linear-gradient(130deg,
-      transparent 0 0,
-      #000 0) top left,
+    linear-gradient(
+        -45deg,
+        transparent 0 var(--notched-scale, var(--default-px-size)),
+        #000 0
+      )
+      bottom right,
+    linear-gradient(130deg, transparent 0 0, #000 0) top left,
     linear-gradient(-135deg, transparent 0 0, #000 0) top right;
   -webkit-mask-size: 50.5% 50.5%;
   -webkit-mask-repeat: no-repeat;
 }
-
-.outer-circle {
-  background: rgba(208, 198, 247, 0.15);
-  border-radius: 50%;
-  height: 129px;
-  width: 129px;
-  position: relative;
-  border: 0.5px solid rgba(255, 188, 255, 1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow:  0px 0px 4px rgba(255, 188, 255, 1);
-}
-
-.inner-circle {
-  position: absolute;
-  /* background: rgba(208, 198, 247, 0.15); */
-  border-radius: 50%;
-  height: 98.9px;
-  width: 98.9px;
-  border: 1px solid rgba(255, 188, 255, 1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: inset 3px 3px 35px rgba(208, 198, 247, 0.6);
-  /*
-   Put top edge and left edge in the center
-  */
-  /* top: 50%;
-  left: 50%;
-  margin: -50px 0px 0px -50px; */
-  /* 
-   Offset the position correctly with
-   minus half of the width and minus half of the height 
-  */
-}
-
-.inner-circle span {
-  font-size: 56px;
-  color: rgba(255, 255, 255, 1);
-  text-shadow: 0px 0px 8px rgba(255, 188, 255, 1);
-}
-
-
-
-
-

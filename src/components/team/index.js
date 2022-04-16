@@ -49,12 +49,19 @@ export default function Team() {
               src={temp.image}
               objectFit="cover"
               quality={100}
+              width={245}
+              height={263}
             />
             <div className={classes.listItemInfo}>
               <LeftBracket />
               <div className={classes.listItemContact}>
                 <span>{temp.name}</span>
-                <Link href={temp.url} target="_blank" rel="noopener noreferrer">
+                <Link
+                  href={temp.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  passHref
+                >
                   {temp.socialMedia}
                 </Link>
               </div>
@@ -72,7 +79,7 @@ const useStyles = createUseStyles({
     backgroundColor: colors.background,
     display: "flex",
     flexDirection: "column",
-    paddingBottom: 312,
+    paddingBottom: 300,
     alignItems: "center",
     justifyItems: "center",
     padding: {
@@ -147,14 +154,14 @@ const useStyles = createUseStyles({
       bottom: 10,
     },
     "& span": {
-      fontSize: 34,
+      fontSize: 26,
       fontWeight: "bold",
       "@media screen and (max-width: 600px)": {
-        fontSize: 26,
+        fontSize: 24,
       },
     },
     "& a": {
-      fontSize: 28,
+      fontSize: 26,
       "@media screen and (max-width: 600px)": {
         fontSize: 18,
       },
