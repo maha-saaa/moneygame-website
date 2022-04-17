@@ -1,10 +1,11 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import { m } from "framer-motion";
+import { useLocomotiveScroll } from "react-locomotive-scroll";
 import Image from "next/image";
 import colors from "@/styles/colors";
-import LeftBracket from "@/public/images/left-bracket.svg";
-import RightBracket from "@/public/images/right-bracket.svg";
+import leftBracket from "@/public/images/left-bracket.png";
+import rightBracket from "@/public/images/right-bracket.png";
 import bgGlass from "@/public/images/bg-glass.png";
 import ButtonBracket from "@/public/images/button-bracket.svg";
 import frames from "../../../public/images/frames.png";
@@ -12,6 +13,12 @@ import { defaultTransition } from "@/utils/transitions";
 
 export default function Intro() {
   const classes = useStyles();
+  const { scroll } = useLocomotiveScroll();
+
+  const goToSection = (event) => {
+    event.preventDefault();
+    scroll?.scrollTo("#howToPlay");
+  };
 
   return (
     <section className={classes.introContainer}>
@@ -32,7 +39,9 @@ export default function Intro() {
       />
       <div className={classes.info}>
         <div className={classes.leftSec}>
-          <ButtonBracket className={classes.timeLineBtn} />
+          <div onClick={goToSection} className={classes.timeLineBtn}>
+            <ButtonBracket />
+          </div>
         </div>
         <div className={classes.centerSec}>
           <div>
@@ -53,9 +62,23 @@ export default function Intro() {
             $5,600,000
           </m.span>
           <div>
-            <LeftBracket />
+            <Image
+              alt="leftBracket"
+              src={leftBracket}
+              objectFit="cover"
+              quality={100}
+              height={53}
+              width={12}
+            />
             <span>10 winners $520,000 each </span>
-            <RightBracket />
+            <Image
+              alt="rightBracket"
+              src={rightBracket}
+              objectFit="cover"
+              quality={100}
+              height={53}
+              width={12}
+            />
           </div>
           <m.div
             className="notched-rectengle-button-2"
@@ -80,7 +103,9 @@ export default function Intro() {
             <span>Press mint for more info</span>
           </div>
         </div>
-        <ButtonBracket className={classes.timeLineBtnSmallScreen} />
+        <div onClick={goToSection} className={classes.timeLineBtnSmallScreen}>
+          <ButtonBracket />
+        </div>
       </div>
     </section>
   );

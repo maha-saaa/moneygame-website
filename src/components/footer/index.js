@@ -201,7 +201,7 @@ const useStyles = createUseStyles({
     },
   },
   title: {
-    fontSize: 52,
+    fontSize: 42,
     fontWeight: "bold",
     fontStyle: "italic",
     color: colors.whiteWithOpacity,
@@ -214,7 +214,7 @@ const useStyles = createUseStyles({
     },
   },
   desc: {
-    fontSize: 22,
+    fontSize: 18,
     color: colors.textPurpleWithOpacity,
     textAlign: "center",
     marginBottom: 52,

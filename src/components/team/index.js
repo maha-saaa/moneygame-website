@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import colors from "@/styles/colors";
 import lineWithCircle from "@/public/images/line-with-circle.png";
-import LeftBracket from "@/public/images/left-bracket-long.svg";
-import RightBracket from "@/public/images/right-bracket-long.svg";
+import leftBracket from "@/public/images/left-bracket.png";
+import rightBracket from "@/public/images/right-bracket.png";
 import avatar1 from "../../../public/images/avatar1.png";
 import avatar2 from "../../../public/images/avatar2.png";
 
@@ -49,11 +49,16 @@ export default function Team() {
               src={temp.image}
               objectFit="cover"
               quality={100}
-              width={245}
-              height={263}
+              width={346}
+              height={262}
             />
             <div className={classes.listItemInfo}>
-              <LeftBracket />
+              <Image
+                alt="leftBracket"
+                src={leftBracket}
+                objectFit="cover"
+                quality={100}
+              />
               <div className={classes.listItemContact}>
                 <span>{temp.name}</span>
                 <Link
@@ -65,7 +70,12 @@ export default function Team() {
                   {temp.socialMedia}
                 </Link>
               </div>
-              <RightBracket />
+              <Image
+                alt="rightBracket"
+                src={rightBracket}
+                objectFit="cover"
+                quality={100}
+              />
             </div>
           </div>
         ))}

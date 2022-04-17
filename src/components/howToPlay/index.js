@@ -22,7 +22,7 @@ export default function HowToPlay() {
   const classes = useStyles();
 
   return (
-    <section className={classes.howToPlayContainer}>
+    <section className={classes.howToPlayContainer} id="howToPlay">
       <div className={classes.header}>
         <Line />
         <Image alt="coinLeft" src={coinLeft} />
@@ -258,7 +258,8 @@ const useStyles = createUseStyles({
   centerPlayColTitle: {
     composes: ["$playTitle"],
     textAlign: "center",
-    marginBottom: 20,
+    marginBottom: 36,
+    marginTop: 45,
   },
   centerPlayColDesc: {
     composes: ["$playDesc"],
