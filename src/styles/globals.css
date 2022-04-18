@@ -289,3 +289,45 @@ a {
   -webkit-mask-size: 50.5% 50.5%;
   -webkit-mask-repeat: no-repeat;
 }
+
+.outer-circle {
+  background: rgba(208, 198, 247, 0.15);
+  border-radius: 50%;
+  height: 100.28px;
+  width: 100.28px;
+  position: relative;
+  border: 0.5px solid rgba(255, 188, 255, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:  0px 0px 4px rgba(255, 188, 255, 1);
+}
+
+.inner-circle {
+  position: absolute;
+  /* background: rgba(208, 198, 247, 0.15); */
+  border-radius: 50%;
+  height: 76.88px;
+  width: 76.88px;
+  border: 1px solid rgba(255, 188, 255, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 3px 3px 35px rgba(208, 198, 247, 0.6);
+  /*
+   Put top edge and left edge in the center
+  */
+  /* top: 50%;
+  left: 50%;
+  margin: -50px 0px 0px -50px; */
+  /* 
+   Offset the position correctly with
+   minus half of the width and minus half of the height 
+  */
+}
+
+.inner-circle span {
+  font-size: 56px;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 0px 0px 8px rgba(255, 188, 255, 1);
+}
