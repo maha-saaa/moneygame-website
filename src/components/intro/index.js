@@ -59,7 +59,7 @@ export default function Intro() {
               },
             }}
           >
-            $5,600,000
+            $3,000,000
           </m.span>
           <div>
             <Image
@@ -70,7 +70,7 @@ export default function Intro() {
               height={53}
               width={12}
             />
-            <span>10 winners $520,000 each </span>
+            <span>10 winners</span>
             <Image
               alt="rightBracket"
               src={rightBracket}

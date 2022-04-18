@@ -49,8 +49,8 @@ export default function Team() {
               src={temp.image}
               objectFit="cover"
               quality={100}
-              width={346}
-              height={262}
+              width={245}
+              height={263}
             />
             <div className={classes.listItemInfo}>
               <Image
@@ -159,19 +159,20 @@ const useStyles = createUseStyles({
     justifyContent: "space-between",
     color: colors.whiteWithOpacity,
     margin: {
-      left: 15,
+      left: 5,
       top: 10,
       bottom: 10,
+      right: 5
     },
     "& span": {
-      fontSize: 26,
+      fontSize: 22,
       fontWeight: "bold",
       "@media screen and (max-width: 600px)": {
         fontSize: 24,
       },
     },
     "& a": {
-      fontSize: 24,
+      fontSize: 20,
       "@media screen and (max-width: 600px)": {
         fontSize: 18,
       },

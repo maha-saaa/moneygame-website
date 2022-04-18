@@ -196,12 +196,12 @@ const useStyles = createUseStyles({
     flexDirection: "column",
     alignItems: "center",
     margin: {
-      top: 60,
+      top: 100,
       bottom: 60,
     },
   },
   title: {
-    fontSize: 42,
+    fontSize: 32,
     fontWeight: "bold",
     fontStyle: "italic",
     color: colors.whiteWithOpacity,
@@ -210,11 +210,11 @@ const useStyles = createUseStyles({
     marginBottom: 4,
     "@media screen and (max-width: 1000px)": {
       fontSize: 30,
-      marginBottom: 27,
+      marginBottom: 2,
     },
   },
   desc: {
-    fontSize: 18,
+    fontSize: 16,
     color: colors.textPurpleWithOpacity,
     textAlign: "center",
     marginBottom: 52,
@@ -226,6 +226,6 @@ const useStyles = createUseStyles({
   bottomText: {
     color: colors.textPurple,
     textAlign: "center",
-    marginTop: 118,
+    marginTop: 160,
   },
 });

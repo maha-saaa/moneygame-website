@@ -19,12 +19,8 @@ const navbarMenu = [
     title: "Whitepaper",
   },
   {
-    key: "#section-Blog",
-    title: "Blog",
-  },
-  {
     key: "#section-Wishlist",
-    title: "Wishlist",
+    title: "Whitelist",
   },
 ];
 

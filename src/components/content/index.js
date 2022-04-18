@@ -27,7 +27,7 @@ export default function Content() {
 const useStyles = createUseStyles({
   container: {
     backgroundColor: colors.background,
-    paddingBottom: 118,
+    paddingBottom: 160,
     display: "flex",
     flex: 1,
     flexDirection: "column",
