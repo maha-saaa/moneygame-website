@@ -233,16 +233,16 @@ a {
 .notched-rectengle-card {
   --default-px-size: 0px;
   --notched-border-color: rgb(189, 181, 222);
-  --notched-scale: 30px;
+  --notched-scale: 22px;
   --notched-border-size: 1px;
   display: flex;
   flex: 1;
   flex-direction: column;
   align-items: "center";
   width: 70%;
-  /* height: 89px; */
+  min-height: 69px;
   margin-bottom: 48px;
-  padding: 24px 28px 24px 24px;
+  padding: 16px 28px 16px 24px;
   cursor: pointer;
   border: 1px solid var(--notched-border-color);
   background: linear-gradient(

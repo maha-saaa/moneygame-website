@@ -53,8 +53,10 @@ export default function HowToPlay() {
           <div className={classes.leftSidedPlayRow}>
             <span className={classes.firstPlayRowTitle}>MINT YOUR PASS</span>
             <span className={classes.firstPlayRowDesc}>
-              {`Get on the whitelist and mint your pass.
-                Your mint funds go into the prize pool contract`}
+              {`Get on the whitelist
+                and mint your pass.
+                Your mint funds go into
+                the prize pool contract`}
             </span>
           </div>
           <PlayLineLeft className={classes.firstPlayLine} />
@@ -110,9 +112,10 @@ export default function HowToPlay() {
           <div className={classes.leftSidedPlayRow}>
             <span className={classes.thirdPlayRowTitle}>Burn your Pass</span>
             <span className={classes.thirdPlayRowDesc}>
-              {`Your passes status as a winner or loser
-                is only revealed when you burn
-                the pass in the prize pool contract.
+              {`Your passes status as a winner
+                or loser is only revealed when
+                you burn the pass in the prize
+                pool contract.
                 If it's revealed as a winner you
                 claim your % of the prize pool`}
             </span>
