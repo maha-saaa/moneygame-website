@@ -20,7 +20,7 @@ export default function Footer() {
           // data-scroll-speed="2"
           // data-scroll-direction="vertical"
         >{`PARTNERSHIPS & COLLABS`}</span> */}
-        <div style={{ display: "flex", flexDirection: "row" }}>
+        <div className={classes.titleWrapper}>
           <span
             className={classes.title}
             data-scroll
@@ -198,6 +198,13 @@ const useStyles = createUseStyles({
     margin: {
       top: 100,
       bottom: 60,
+    },
+  },
+  titleWrapper: {
+    display: "flex",
+    flexDirection: "row",
+    "@media screen and (min-width: 1600px)": {
+      marginBottom: 30,
     },
   },
   title: {
