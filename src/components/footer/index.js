@@ -72,7 +72,7 @@ export default function Footer() {
           <span
             className={classes.title}
             data-scroll
-            data-scroll-delay="0.045"
+            data-scroll-delay="0.065"
             data-scroll-speed="5"
           >
             R
@@ -80,7 +80,7 @@ export default function Footer() {
           <span
             className={classes.title}
             data-scroll
-            data-scroll-delay="0.035"
+            data-scroll-delay="0.075"
             data-scroll-speed="5"
           >
             S
@@ -88,7 +88,7 @@ export default function Footer() {
           <span
             className={classes.title}
             data-scroll
-            data-scroll-delay="0.035"
+            data-scroll-delay="0.085"
             data-scroll-speed="5"
           >
             H
@@ -96,7 +96,7 @@ export default function Footer() {
           <span
             className={classes.title}
             data-scroll
-            data-scroll-delay="0.045"
+            data-scroll-delay="0.095"
             data-scroll-speed="5"
           >
             I
@@ -104,7 +104,7 @@ export default function Footer() {
           <span
             className={classes.title}
             data-scroll
-            data-scroll-delay="0.055"
+            data-scroll-delay="0.15"
             data-scroll-speed="5"
           >
             P
@@ -112,13 +112,13 @@ export default function Footer() {
           <span
             className={classes.title}
             data-scroll
-            data-scroll-delay="0.065"
+            data-scroll-delay="0.25"
             data-scroll-speed="5"
           >{`\u00A0&\u00A0`}</span>
           <span
             className={classes.title}
             data-scroll
-            data-scroll-delay="0.075"
+            data-scroll-delay="0.085"
             data-scroll-speed="5"
           >
             C
@@ -126,18 +126,10 @@ export default function Footer() {
           <span
             className={classes.title}
             data-scroll
-            data-scroll-delay="0.085"
-            data-scroll-speed="5"
-          >
-            O
-          </span>
-          <span
-            className={classes.title}
-            data-scroll
             data-scroll-delay="0.095"
             data-scroll-speed="5"
           >
-            L
+            O
           </span>
           <span
             className={classes.title}
@@ -153,12 +145,20 @@ export default function Footer() {
             data-scroll-delay="0.25"
             data-scroll-speed="5"
           >
-            A
+            L
           </span>
           <span
             className={classes.title}
             data-scroll
             data-scroll-delay="0.35"
+            data-scroll-speed="5"
+          >
+            A
+          </span>
+          <span
+            className={classes.title}
+            data-scroll
+            data-scroll-delay="0.45"
             data-scroll-speed="5"
           >
             B

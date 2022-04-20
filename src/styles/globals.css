@@ -38,6 +38,7 @@ a {
   display: flex;
   width: 134px;
   height: 40px;
+  position: relative;
   border: 1px solid var(--notched-border-color);
   background: linear-gradient(
         45deg,

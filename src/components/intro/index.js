@@ -100,6 +100,8 @@ export default function Intro() {
           <div className={classes.rightSecTextContainer}>
             <span className={classes.rightSecTitle}>Price?</span>
             <span className={classes.rightSecDesc}>0.2 ETH each</span>
+            <span className={classes.rightSecTitle}>Supply?</span>
+            <span className={classes.rightSecDesc}>10,000</span>
             <span>Press mint for more info</span>
           </div>
         </div>
@@ -154,6 +156,9 @@ const useStyles = createUseStyles({
     cursor: "pointer",
     marginTop: 41,
     "@media screen and (min-width: 1200px)": {
+      display: "none",
+    },
+    "@media screen and (max-width: 600px)": {
       display: "none",
     },
   },
@@ -233,15 +238,24 @@ const useStyles = createUseStyles({
     "& span:nth-child(5)": {
       fontSize: 14,
       fontWeight: "bold",
+      "@media screen and (min-width: 1600px)": {
+        fontSize: 22,
+      },
     },
   },
   rightSecTitle: {
     fontSize: 14,
     marginBottom: 5,
+    "@media screen and (min-width: 1600px)": {
+      fontSize: 22,
+    },
   },
   rightSecDesc: {
     fontSize: 14,
     color: colors.textPurpleWithOpacity,
     marginBottom: 20,
+    "@media screen and (min-width: 1600px)": {
+      fontSize: 22,
+    },
   },
 });

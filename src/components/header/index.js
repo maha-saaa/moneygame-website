@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { createUseStyles } from "react-jss";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import colors from "@/styles/colors";
-import Logo from "@/public/images/logo.svg";
+import logo from "@/public/images/logo.png";
 import OpenSea from "@/public/images/open-sea.svg";
 import Twitter from "@/public/images/twitter.svg";
 import Discord from "@/public/images/discord.svg";
@@ -26,6 +27,7 @@ const navbarMenu = [
 
 export default function Header() {
   const classes = useStyles();
+  const [hoverConnect, setHoverConnect] = useState(false);
   const {
     account,
     activate,
@@ -72,7 +74,7 @@ export default function Header() {
       </div>
 
       <div className={classes.logo}>
-        <Logo />
+        <Image alt="logo" src={logo} />
       </div>
 
       <div className={classes.access}>
@@ -80,7 +82,7 @@ export default function Header() {
           <motion.li
             initial={{ x: 150 }}
             animate={{ x: 10 }}
-            transition={{ ease: "easeOut", duration: 1, delay: 0}}
+            transition={{ ease: "easeOut", duration: 1, delay: 0 }}
           >
             <a
               href={"https://opensea.io/"}
@@ -119,22 +121,33 @@ export default function Header() {
           <li>
             <motion.div
               className="notched-rectengle-button"
-              onClick={active ? disconnect : connect}
+              onClick={connect}
               whileHover={{
                 scale: 1.1,
               }}
+              onMouseEnter={() => setHoverConnect(true)}
+              // onMouseLeave={() => setHoverConnect(false)}
             >
-              {!active ? <span>Connect Wallet</span> : <span>Disconnect</span>}
+              {!active ? (
+                <span>Connect Wallet</span>
+              ) : (
+                <span>{`${account.slice(0, 8)}...`}</span>
+              )}
             </motion.div>
+            {hoverConnect ? (
+              <div className={classes.connectModal}>
+                <div onClick={() => setHoverConnect(false)}>
+                  <span>close</span>
+                </div>
+
+                <div onClick={() => active && disconnect()}>
+                  <span>Disconnect</span>
+                </div>
+              </div>
+            ) : null}
           </li>
         </ul>
       </div>
-      {active ? (
-        <span className={classes.activateNumber}>{`${account.slice(
-          0,
-          5
-        )}...`}</span>
-      ) : null}
     </header>
   );
 }
@@ -226,12 +239,33 @@ const useStyles = createUseStyles({
           color: colors.text,
         },
       },
+      "& li:last-child": {
+        "@media screen and (min-width: 1600px)": {
+          marginLeft: 44,
+        },
+      },
     },
   },
-  activateNumber: {
-    color: colors.white,
-    "@media screen and (max-width: 1000px)": {
-      display: "none",
+  connectModal: {
+    position: "absolute",
+    boxSizing: "border-box",
+    overflowY: "scroll",
+    maxHeight: 150,
+    width: 180,
+    right: "8%",
+    zIndex: 999,
+    background: colors.background,
+    padding: 10,
+    border: "1px solid rgb(189, 181, 222)",
+    color: colors.whiteWithOpacity,
+    display: "flex",
+    flexDirection: "column",
+    transform: "translate(0, 10px)",
+    "& div": {
+      cursor: "pointer",
     },
+    "& div:nth-child(1)": {
+      alignSelf: "flex-end"
+    }
   },
 });

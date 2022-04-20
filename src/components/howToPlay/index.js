@@ -314,6 +314,24 @@ const useStyles = createUseStyles({
     "@media screen and (max-width: 1280px)": {
       display: "none",
     },
+    "@media screen and (min-width: 1600px)": {
+      padding: {
+        left: 300,
+        right: 300,
+      },
+    },
+    "@media screen and (min-width: 1700px)": {
+      padding: {
+        left: 400,
+        right: 400,
+      },
+    },
+    "@media screen and (min-width: 1900px)": {
+      padding: {
+        left: 480,
+        right: 480,
+      },
+    },
   },
   playRow: {
     display: "flex",
