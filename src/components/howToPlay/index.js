@@ -67,7 +67,7 @@ export default function HowToPlay() {
             data-scroll-speed="2"
             data-scroll-position="down"
             data-scroll-direction="vertical"
-            style={{zIndex: 10}}
+            style={{ zIndex: 10 }}
           />
         </div>
         <div className={classes.playRow}>
@@ -78,7 +78,7 @@ export default function HowToPlay() {
             data-scroll-speed="2"
             data-scroll-position="down"
             data-scroll-direction="vertical"
-            style={{zIndex: 10}}
+            style={{ zIndex: 10 }}
           />
           <PlayLineRight className={classes.secondPlayLine} />
           <div className={classes.leftSidedPlayRow}>
@@ -128,7 +128,7 @@ export default function HowToPlay() {
             data-scroll-speed="2"
             data-scroll-position="down"
             data-scroll-direction="vertical"
-            style={{zIndex: 10}}
+            style={{ zIndex: 10 }}
           />
         </div>
         <div className={classes.playRow}>
@@ -139,7 +139,7 @@ export default function HowToPlay() {
             data-scroll-speed="2"
             data-scroll-position="down"
             data-scroll-direction="vertical"
-            style={{zIndex: 10}}
+            style={{ zIndex: 10 }}
           />
           <PlayLineRight className={classes.fourthPlayLine} />
           <div className={classes.leftSidedPlayRow}>
@@ -307,30 +307,8 @@ const useStyles = createUseStyles({
   info: {
     display: "flex",
     flexDirection: "column",
-    padding: {
-      left: 200,
-      right: 200,
-    },
     "@media screen and (max-width: 1280px)": {
       display: "none",
-    },
-    "@media screen and (min-width: 1600px)": {
-      padding: {
-        left: 300,
-        right: 300,
-      },
-    },
-    "@media screen and (min-width: 1700px)": {
-      padding: {
-        left: 400,
-        right: 400,
-      },
-    },
-    "@media screen and (min-width: 1900px)": {
-      padding: {
-        left: 480,
-        right: 480,
-      },
     },
   },
   playRow: {
@@ -338,14 +316,43 @@ const useStyles = createUseStyles({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 100,
     position: "relative",
+    margin: {
+      left: 200,
+      right: 200,
+      bottom: 100,
+    },
+    "@media screen and (min-width: 1600px)": {
+      margin: {
+        left: 300,
+        right: 300,
+        bottom: 100,
+      },
+    },
+    "@media screen and (min-width: 1700px)": {
+      margin: {
+        left: 400,
+        right: 400,
+        bottom: 100,
+      },
+    },
+    "@media screen and (min-width: 1900px)": {
+      margin: {
+        left: 480,
+        right: 480,
+        bottom: 100,
+      },
+    },
   },
   playCol: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     marginTop: 100,
+    margin: {
+      left: 200,
+      right: 200,
+    },
   },
   playTitle: {
     fontSize: 32,

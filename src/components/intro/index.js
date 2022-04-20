@@ -239,7 +239,7 @@ const useStyles = createUseStyles({
       fontSize: 14,
       fontWeight: "bold",
       "@media screen and (min-width: 1600px)": {
-        fontSize: 22,
+        fontSize: 16,
       },
     },
   },
@@ -247,7 +247,7 @@ const useStyles = createUseStyles({
     fontSize: 14,
     marginBottom: 5,
     "@media screen and (min-width: 1600px)": {
-      fontSize: 22,
+      fontSize: 16,
     },
   },
   rightSecDesc: {
@@ -255,7 +255,7 @@ const useStyles = createUseStyles({
     color: colors.textPurpleWithOpacity,
     marginBottom: 20,
     "@media screen and (min-width: 1600px)": {
-      fontSize: 22,
+      fontSize: 16,
     },
   },
 });
