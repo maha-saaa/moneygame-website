@@ -8,7 +8,11 @@ import leftBracket from "@/public/images/left-bracket.png";
 import rightBracket from "@/public/images/right-bracket.png";
 import bgGlass from "@/public/images/bg-glass.png";
 import ButtonBracket from "@/public/images/button-bracket.svg";
-import frames from "../../../public/images/frames.png";
+import frames from "@/public/images/frames.png";
+import yellowRay1 from "@/public/images/yellow-ray-1.png";
+import yellowRay2 from "@/public/images/yellow-ray-2.png";
+import yellowRay3 from "@/public/images/yellow-ray-3.png";
+import purpleLight from "@/public/images/purple-light.png";
 import { defaultTransition } from "@/utils/transitions";
 
 export default function Intro() {
@@ -30,6 +34,102 @@ export default function Intro() {
         objectPosition="center"
         priority
       />
+      <m.div
+        className={classes.purpleLightWrapper}
+        initial={{
+          x: -500,
+        }}
+        animate={{
+          x: -200,
+        }}
+        transition={{
+          type: "tween",
+          ease: "easeInOut",
+          repeat: Infinity,
+          repeatType: "mirror",
+          repeatDelay: 1,
+          duration: 10,
+        }}
+      >
+        <Image
+          alt="purpleLight"
+          src={purpleLight}
+          objectFit="contain"
+          layout="fill"
+        />
+      </m.div>
+      <m.div
+        className={classes.yellowRay1Wrapper}
+        initial={{
+          x: 0,
+        }}
+        animate={{
+          x: 100,
+        }}
+        transition={{
+          type: "tween",
+          ease: "easeInOut",
+          repeat: Infinity,
+          repeatType: "mirror",
+          repeatDelay: 1,
+          duration: 10,
+        }}
+      >
+        <Image
+          alt="yellowRay1"
+          src={yellowRay1}
+          objectFit="contain"
+          layout="fill"
+        />
+      </m.div>
+      <m.div
+        className={classes.yellowRay2Wrapper}
+        initial={{
+          x: 0,
+        }}
+        animate={{
+          x: 100,
+        }}
+        transition={{
+          type: "tween",
+          ease: "easeInOut",
+          repeat: Infinity,
+          repeatType: "mirror",
+          repeatDelay: 1,
+          duration: 5,
+        }}
+      >
+        <Image
+          alt="yellowRay2"
+          src={yellowRay2}
+          objectFit="contain"
+          layout="fill"
+        />
+      </m.div>
+      <m.div
+        className={classes.yellowRay3Wrapper}
+        initial={{
+          x: 0,
+        }}
+        animate={{
+          x: 100,
+        }}
+        transition={{
+          type: "tween",
+          ease: "easeInOut",
+          repeat: Infinity,
+          repeatType: "mirror",
+          repeatDelay: 1,
+          duration: 10,
+        }}
+      >
+        <Image
+          alt="yellowRay3"
+          src={yellowRay3}
+          objectFit="contain"
+          layout="fill"
+        />
+      </m.div>
       <Image
         alt="cards"
         src={frames}
@@ -257,5 +357,33 @@ const useStyles = createUseStyles({
     "@media screen and (min-width: 1600px)": {
       fontSize: 16,
     },
+  },
+  yellowRay1Wrapper: {
+    position: "absolute",
+    top: -7,
+    left: 0,
+    height: 712,
+    width: 496,
+  },
+  yellowRay2Wrapper: {
+    position: "absolute",
+    top: -7,
+    left: 0,
+    height: 604,
+    width: 346,
+  },
+  yellowRay3Wrapper: {
+    position: "absolute",
+    top: -7,
+    left: -103,
+    height: 604,
+    width: 398,
+  },
+  purpleLightWrapper: {
+    position: "absolute",
+    top: -7,
+    left: 0,
+    height: 852,
+    width: 1322,
   },
 });
