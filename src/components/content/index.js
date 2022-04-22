@@ -6,19 +6,19 @@ import colors from "@/styles/colors";
 import headerLine from "@/public/images/header-line.png";
 
 const Intro = dynamic(() => import("@/components/intro"), {
-  loading: () => <div style={{ backgroundColor: colors.background }} />,
+  loading: () => <div />,
 });
 const HowToPlay = dynamic(() => import("@/components/howToPlay"), {
-  loading: () => <div style={{ backgroundColor: colors.background }} />,
+  loading: () => <div />,
 });
 const Team = dynamic(() => import("@/components/team"), {
-  loading: () => <div style={{ backgroundColor: colors.background }} />,
+  loading: () => <div />,
 });
 const Faq = dynamic(() => import("@/components/faq"), {
-  loading: () => <div style={{ backgroundColor: colors.background }} />,
+  loading: () => <div />,
 });
 const Footer = dynamic(() => import("@/components/footer"), {
-  loading: () => <div style={{ backgroundColor: colors.background }} />,
+  loading: () => <div />,
 });
 
 export default function Content() {
