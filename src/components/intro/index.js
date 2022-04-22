@@ -32,7 +32,6 @@ export default function Intro() {
         objectFit="cover"
         layout="fill"
         objectPosition="center"
-        priority
       />
       <m.div
         className={classes.purpleLightWrapper}

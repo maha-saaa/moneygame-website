@@ -4,8 +4,15 @@ import { useRouter } from "next/router";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import Layout from "@/components/layout";
-import Content from "@/components/content";
-import Preloader from "@/components/preloader";
+// import Content from "@/components/Content";
+// import Preloader from "@/components/preloader";
+
+const Content = dynamic(() => import("@/components/Content"), {
+  loading: () => <div />,
+});
+const Preloader = dynamic(() => import("@/components/preloader"), {
+  loading: () => <div />,
+});
 
 export default function Home() {
   const router = useRouter();
