@@ -130,13 +130,7 @@ export default function Intro() {
           layout="fill"
         />
       </m.div>
-      <Image
-        alt="cards"
-        src={frames}
-        objectFit="cover"
-        quality={100}
-        unoptimized
-      />
+      <Image alt="cards" src={frames} objectFit="cover" quality={100} />
       <div className={classes.info}>
         <div className={classes.leftSec}>
           <div onClick={goToSection} className={classes.timeLineBtn}>
@@ -165,7 +159,7 @@ export default function Intro() {
             <Image
               alt="leftBracket"
               src={leftBracket}
-              objectFit="cover"
+              objectFit="contain"
               quality={100}
               height={53}
               width={12}
@@ -175,7 +169,7 @@ export default function Intro() {
             <Image
               alt="rightBracket"
               src={rightBracket}
-              objectFit="cover"
+              objectFit="contain"
               quality={100}
               height={53}
               width={12}
@@ -291,7 +285,7 @@ const useStyles = createUseStyles({
       flexDirection: "row",
       justifyItems: "center",
       alignItems: "center",
-      marginBottom: 18,
+      marginBottom: 24,
       "& span": {
         fontSize: 20,
         fontWeight: "bold",
