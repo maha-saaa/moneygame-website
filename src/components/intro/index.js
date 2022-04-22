@@ -130,7 +130,13 @@ export default function Intro() {
           layout="fill"
         />
       </m.div>
-      <Image alt="cards" src={frames} objectFit="cover" quality={100} />
+      <Image
+        alt="cards"
+        src={frames}
+        objectFit="cover"
+        quality={100}
+        unoptimized
+      />
       <div className={classes.info}>
         <div className={classes.leftSec}>
           <div onClick={goToSection} className={classes.timeLineBtn}>
