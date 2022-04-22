@@ -33,7 +33,7 @@ export default function Team() {
     <section className={classes.teamContainer}>
       <div className={classes.header}>
         <span className={classes.title}>TEAM</span>
-        <Image src={lineWithCircle} alt="lineWithCircle" />
+        <Image src={lineWithCircle} alt="lineWithCircle" loading="lazy" />
       </div>
       <div className={classes.list}>
         {data.map((temp) => (
@@ -51,6 +51,7 @@ export default function Team() {
               quality={100}
               width={245}
               height={263}
+              loading="lazy"
             />
             <div className={classes.listItemInfo}>
               <Image
@@ -58,6 +59,7 @@ export default function Team() {
                 src={leftBracket}
                 objectFit="cover"
                 quality={100}
+                loading="lazy"
               />
               <div className={classes.listItemContact}>
                 <span>{temp.name}</span>
@@ -75,6 +77,7 @@ export default function Team() {
                 src={rightBracket}
                 objectFit="cover"
                 quality={100}
+                loading="lazy"
               />
             </div>
           </div>
@@ -162,7 +165,7 @@ const useStyles = createUseStyles({
       left: 5,
       top: 10,
       bottom: 10,
-      right: 5
+      right: 5,
     },
     "& span": {
       fontSize: 22,

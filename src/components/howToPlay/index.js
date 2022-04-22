@@ -27,7 +27,7 @@ export default function HowToPlay() {
     <section className={classes.howToPlayContainer} id="howToPlay">
       <div className={classes.header}>
         <Line />
-        <Image alt="coinLeft" src={coinLeft} />
+        <Image alt="coinLeft" src={coinLeft} loading="lazy" />
         <span
           className={classes.title}
           data-scroll
@@ -37,7 +37,7 @@ export default function HowToPlay() {
         >
           HOW TO PLAY
         </span>
-        <Image alt="coinRight" src={coinRight} />
+        <Image alt="coinRight" src={coinRight} loading="lazy" />
         <Line />
       </div>
       <div className={classes.info}>
@@ -68,6 +68,7 @@ export default function HowToPlay() {
             data-scroll-position="down"
             data-scroll-direction="vertical"
             style={{ zIndex: 10 }}
+            loading="lazy"
           />
         </div>
         <div className={classes.playRow}>
@@ -79,6 +80,7 @@ export default function HowToPlay() {
             data-scroll-position="down"
             data-scroll-direction="vertical"
             style={{ zIndex: 10 }}
+            loading="lazy"
           />
           <PlayLineRight className={classes.secondPlayLine} />
           <div className={classes.leftSidedPlayRow}>
@@ -129,6 +131,7 @@ export default function HowToPlay() {
             data-scroll-position="down"
             data-scroll-direction="vertical"
             style={{ zIndex: 10 }}
+            loading="lazy"
           />
         </div>
         <div className={classes.playRow}>
@@ -140,6 +143,7 @@ export default function HowToPlay() {
             data-scroll-position="down"
             data-scroll-direction="vertical"
             style={{ zIndex: 10 }}
+            loading="lazy"
           />
           <PlayLineRight className={classes.fourthPlayLine} />
           <div className={classes.leftSidedPlayRow}>
@@ -166,7 +170,7 @@ export default function HowToPlay() {
           </div>
         </div>
         <div className={classes.playCol}>
-          <Image alt="lineNumberUp" src={lineNumberUp} />
+          <Image alt="lineNumberUp" src={lineNumberUp} loading="lazy" />
           <span className={classes.centerPlayColTitle}>The Difference?</span>
           <span className={classes.centerPlayColDesc}>
             Unlike the traditional lottery games, ours is 100% provably fair.
@@ -191,44 +195,44 @@ export default function HowToPlay() {
           >
             <span>Whitepaper</span>
           </m.div>
-          <Image alt="lineNumberDown" src={lineNumberDown} />
+          <Image alt="lineNumberDown" src={lineNumberDown} loading="lazy" />
         </div>
       </div>
 
       <div className={classes.infoS}>
         <div className={classes.rowS}>
-          <Image alt="lineNumberUpS" src={lineNumberUpS} />
+          <Image alt="lineNumberUpS" src={lineNumberUpS} loading="lazy" />
           <span className={classes.lineNumber}>1</span>
           <span className={classes.rowTitleS}>MINT YOUR PASS</span>
           <span className={classes.rowDescS}>
             {`Get on the whitelist and mint your pass.\nYour minting funds go into the prize pool.`}
           </span>
-          <Image alt="playCardOneS" src={playCardOneS} />
+          <Image alt="playCardOneS" src={playCardOneS} loading="lazy" />
         </div>
         <div className={classes.rowS}>
           <span className={classes.lineNumber}>2</span>
-          <Image alt="lineNumberUpS" src={lineNumberUpS} />
+          <Image alt="lineNumberUpS" src={lineNumberUpS} loading="lazy" />
           <span className={classes.rowTitleS}>Determination</span>
           <span className={classes.rowDescS}>
             {`Using Smart Contracts your pass is\n determined as a winner or loser. 
               We can’t change this or know who the\n winners are.`}
           </span>
-          <Image alt="playCardTwoS" src={playCardTwoS} />
+          <Image alt="playCardTwoS" src={playCardTwoS} loading="lazy" />
         </div>
         <div className={classes.rowS}>
           <span className={classes.lineNumber}>3</span>
-          <Image alt="lineNumberUpS" src={lineNumberUpS} />
+          <Image alt="lineNumberUpS" src={lineNumberUpS} loading="lazy" />
           <span className={classes.rowTitleS}>Burn your Pass</span>
           <span className={classes.rowDescS}>
             {`Your passes status as winner or loser is only
               determined when you burn the pass in the\n prize poll contract.
               If it's revealed as a winner you claim your %\n of the jackpot ($5000,000)`}
           </span>
-          <Image alt="playCardThreeS" src={playCardThreeS} />
+          <Image alt="playCardThreeS" src={playCardThreeS} loading="lazy" />
         </div>
         <div className={classes.rowS}>
           <span className={classes.lineNumber}>4</span>
-          <Image alt="lineNumberUpS" src={lineNumberUpS} />
+          <Image alt="lineNumberUpS" src={lineNumberUpS} loading="lazy" />
           <span className={classes.rowTitleS}>Secondary Market</span>
           <span className={classes.rowDescS}>
             {`Passes can also be sold on secondary, what
@@ -237,10 +241,10 @@ export default function HowToPlay() {
                 selling your winner on secondary market or
                 will you try to claim the prize yourself?`}
           </span>
-          <Image alt="playCardFourS" src={playCardFourS} />
+          <Image alt="playCardFourS" src={playCardFourS} loading="lazy" />
         </div>
         <div className={classes.rowS}>
-          <Image alt="lineNumberUp" src={lineNumberUp} />
+          <Image alt="lineNumberUp" src={lineNumberUp} loading="lazy" />
           <span className={classes.lastRowTitleS}>The Difference?</span>
           <span className={classes.rowDescS}>
             Unlike the traditional lottery games, ours is 100% provably fair,
@@ -264,7 +268,7 @@ export default function HowToPlay() {
           >
             <span>Whitepaper</span>
           </m.div>
-          <Image alt="lineNumberDown" src={lineNumberDown} />
+          <Image alt="lineNumberDown" src={lineNumberDown} loading="lazy" />
         </div>
       </div>
     </section>

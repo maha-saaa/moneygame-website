@@ -11,7 +11,7 @@ export default function Footer() {
 
   return (
     <footer className={classes.footerContainer}>
-      <Image alt="footerLineUp" src={footerLineUp} />
+      <Image alt="footerLineUp" src={footerLineUp} loading="lazy" />
       <div className={classes.contact}>
         {/* <span
           className={classes.title}
@@ -177,7 +177,7 @@ export default function Footer() {
           <span style={{ color: colors.textPurple }}>Reach out to Us</span>
         </m.div>
       </div>
-      <Image alt="footerLineDown" src={footerLineDown} />
+      <Image alt="footerLineDown" src={footerLineDown} loading="lazy" />
       <span className={classes.bottomText}>A PROJECT BY FND</span>
     </footer>
   );

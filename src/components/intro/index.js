@@ -169,6 +169,7 @@ export default function Intro() {
               quality={100}
               height={53}
               width={12}
+              loading="lazy"
             />
             <span>10 winners</span>
             <Image
@@ -178,6 +179,7 @@ export default function Intro() {
               quality={100}
               height={53}
               width={12}
+              loading="lazy"
             />
           </div>
           <m.div

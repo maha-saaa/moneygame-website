@@ -14,7 +14,7 @@ export default function Content() {
 
   return (
     <div className={classes.container} data-scroll-section>
-      <Image alt="headerLine" src={headerLine} />
+      <Image alt="headerLine" src={headerLine} loading="lazy" />
       <Intro />
       <HowToPlay />
       <Faq />

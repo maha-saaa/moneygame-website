@@ -74,7 +74,7 @@ export default function Header() {
       </div>
 
       <div className={classes.logo}>
-        <Image alt="logo" src={logo} />
+        <Image alt="logo" src={logo} loading="lazy" />
       </div>
 
       <div className={classes.access}>
