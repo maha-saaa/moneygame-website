@@ -154,6 +154,10 @@ const useStyles = createUseStyles({
     left: 0,
     height: 712,
     width: 496,
+    "@media screen and (max-width: 1000px)": {
+      height: 300,
+      width: 233,
+    },
   },
   yellowRay2Wrapper: {
     position: "absolute",
@@ -161,6 +165,10 @@ const useStyles = createUseStyles({
     left: 0,
     height: 604,
     width: 346,
+    "@media screen and (max-width: 1000px)": {
+      height: 300,
+      width: 233,
+    },
   },
   yellowRay3Wrapper: {
     position: "absolute",
@@ -168,6 +176,10 @@ const useStyles = createUseStyles({
     left: -103,
     height: 604,
     width: 398,
+    "@media screen and (max-width: 1000px)": {
+      height: 300,
+      width: 233,
+    },
   },
   purpleLightWrapper: {
     position: "absolute",
@@ -175,5 +187,8 @@ const useStyles = createUseStyles({
     left: 0,
     height: 852,
     width: 1322,
+    "@media screen and (max-width: 1000px)": {
+      display: "none",
+    },
   },
 });
