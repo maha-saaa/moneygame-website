@@ -1,5 +1,8 @@
 module.exports = {
   swcMinify: true,
+  images: {
+    minimumCacheTTL: 31536000,
+  },
   webpack: (config, { dev, isServer }) => {
     config.module.rules.push({
       test: /\.svg$/i,
