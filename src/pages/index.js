@@ -5,12 +5,13 @@ import { useRouter } from "next/router";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import Layout from "@/components/layout";
+import colors from "@/styles/colors";
 
 const Content = dynamic(() => import("@/components/content"), {
-  loading: () => <div />,
+  loading: () => <div style={{ backgroundColor: colors.background }} />,
 });
 const Preloader = dynamic(() => import("@/components/preloader"), {
-  loading: () => <div />,
+  loading: () => <div style={{ backgroundColor: colors.background }} />,
 });
 
 export default function Home() {
