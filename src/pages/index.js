@@ -5,10 +5,10 @@ import { useRouter } from "next/router";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import Layout from "@/components/layout";
-// import Content from "@/components/Content";
+// import Content from "@/components/content";
 // import Preloader from "@/components/preloader";
 
-const Content = dynamic(() => import("@/components/Content"), {
+const Content = dynamic(() => import("@/components/content"), {
   loading: () => <div />,
 });
 const Preloader = dynamic(() => import("@/components/preloader"), {
