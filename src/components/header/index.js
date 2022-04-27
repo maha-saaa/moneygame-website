@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { createUseStyles } from "react-jss";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import colors from "@/styles/colors";
 import logo from "@/public/images/logo.png";
+import disconnectLogo from "@/public/images/disconnect.png";
 import OpenSea from "@/public/images/open-sea.svg";
 import Twitter from "@/public/images/twitter.svg";
 import Discord from "@/public/images/discord.svg";
@@ -27,7 +28,8 @@ const navbarMenu = [
 
 export default function Header() {
   const classes = useStyles();
-  const [hoverConnect, setHoverConnect] = useState(false);
+  const [disconnectModal, setDisconnectModal] = useState(false);
+  const ref = useRef();
   const {
     account,
     activate,
@@ -40,24 +42,43 @@ export default function Header() {
     setError,
   } = useWeb3React();
 
+  useEffect(() => {
+    const checkIfClickedOutside = (e) => {
+      if (disconnectModal && ref.current && !ref.current.contains(e.target)) {
+        setDisconnectModal(false);
+      }
+    };
+
+    document.addEventListener("mousedown", checkIfClickedOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", checkIfClickedOutside);
+    };
+  }, [disconnectModal]);
+
   const connect = async () => {
-    try {
-      await activate(injected);
-    } catch (error) {
-      console.log(error);
+    if (!active) {
+      try {
+        await activate(injected);
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      setDisconnectModal(true);
     }
   };
 
   const disconnect = async () => {
     try {
       deactivate();
+      setDisconnectModal(false);
     } catch (error) {
       console.log(error);
     }
   };
 
   return (
-    <header className={classes.headerContainer}>
+    <header className={classes.headerContainer} ref={ref}>
       <div className={classes.menu}>
         <ul>
           {navbarMenu?.map((temp, index) => (
@@ -125,24 +146,20 @@ export default function Header() {
               whileHover={{
                 scale: 1.1,
               }}
-              onMouseEnter={() => setHoverConnect(true)}
-              // onMouseLeave={() => setHoverConnect(false)}
             >
               {!active ? (
                 <span>Connect Wallet</span>
               ) : (
-                <span>{`${account.slice(0, 8)}...`}</span>
+                <span>{`${account.slice(0, 10)}...`}</span>
               )}
             </motion.div>
-            {hoverConnect ? (
-              <div className={classes.connectModal}>
-                <div onClick={() => setHoverConnect(false)}>
-                  <span>close</span>
-                </div>
-
-                <div onClick={() => active && disconnect()}>
-                  <span>Disconnect</span>
-                </div>
+            {disconnectModal ? (
+              <div
+                className={classes.connectModal}
+                onClick={() => active && disconnect()}
+              >
+                <Image alt="disconnect" src={disconnectLogo} loading="lazy" />
+                <span>Disconnect</span>
               </div>
             ) : null}
           </li>
@@ -251,21 +268,23 @@ const useStyles = createUseStyles({
     boxSizing: "border-box",
     overflowY: "scroll",
     maxHeight: 150,
-    width: 180,
-    right: "8%",
+    width: 134,
+    right: "9.5%",
     zIndex: 999,
     background: colors.background,
     padding: 10,
     border: "1px solid rgb(189, 181, 222)",
+    filter: "drop-shadow(0px 0px 4px 0px rgba(208, 198, 247, 1))",
+    boxShadow: "inset 0px 0px 6px 0px rgba(208, 198, 247, 1)",
     color: colors.whiteWithOpacity,
     display: "flex",
-    flexDirection: "column",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
     transform: "translate(0, 10px)",
-    "& div": {
-      cursor: "pointer",
+    cursor: "pointer",
+    "& span": {
+      marginLeft: 8,
     },
-    "& div:nth-child(1)": {
-      alignSelf: "flex-end"
-    }
   },
 });

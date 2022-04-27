@@ -1,17 +1,11 @@
 import { NextSeo } from "next-seo";
 import { useRef, useState, useEffect } from "react";
-import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import Layout from "@/components/layout";
-
-const Content = dynamic(() => import("@/components/content"), {
-  loading: () => <div />,
-});
-const Preloader = dynamic(() => import("@/components/preloader"), {
-  loading: () => <div />,
-});
+import Content from "@/components/content";
+import Preloader from "@/components/preloader";
 
 export default function Home() {
   const router = useRouter();

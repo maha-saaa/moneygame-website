@@ -1,21 +1,26 @@
-import Document from 'next/document'
-import { SheetsRegistry, JssProvider, createGenerateId } from 'react-jss'
+import Document from "next/document";
+import Head from "next/head";
+import { SheetsRegistry, JssProvider, createGenerateId } from "react-jss";
 
 export default class JssDocument extends Document {
   static async getInitialProps(ctx) {
-    const registry = new SheetsRegistry()
-    const generateId = createGenerateId()
-    const originalRenderPage = ctx.renderPage
+    const registry = new SheetsRegistry();
+    const generateId = createGenerateId();
+    const originalRenderPage = ctx.renderPage;
     ctx.renderPage = () =>
       originalRenderPage({
-        enhanceApp: (App) => (props) => (
-          <JssProvider registry={registry} generateId={generateId}>
-            <App {...props} />
-          </JssProvider>
-        ),
-      })
+        enhanceApp: (App) => (props) =>
+          (
+            <JssProvider registry={registry} generateId={generateId}>
+              <Head>
+                <link rel="icon" href="/favicon.ico" />
+              </Head>
+              <App {...props} />
+            </JssProvider>
+          ),
+      });
 
-    const initialProps = await Document.getInitialProps(ctx)
+    const initialProps = await Document.getInitialProps(ctx);
 
     return {
       ...initialProps,
@@ -25,6 +30,6 @@ export default class JssDocument extends Document {
           <style id="server-side-styles">{registry.toString()}</style>
         </>
       ),
-    }
+    };
   }
 }
