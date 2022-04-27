@@ -29,6 +29,13 @@ a {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Poppins";
+  src: url("../../public/fonts/Poppins-SemiBold.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
 .notched-rectengle-button {
   --default-px-size: 0px;
   --notched-border-color: rgba(208, 198, 247, 1);

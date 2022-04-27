@@ -301,11 +301,11 @@ const useStyles = createUseStyles({
     },
   },
   textWithShadow: {
+    fontFamily: "Poppins",
     fontSize: 96,
-    fontStyle: "italic",
     fontWeight: "bold",
     color: colors.whiteWithOpacity,
-    textShadow: "0px 9px 9px rgba(208, 198, 247, 0.6)",
+    textShadow: "0px 9px 4px rgba(208, 198, 247, 0.6)",
     margin: {
       top: 10,
       bottom: 10,
