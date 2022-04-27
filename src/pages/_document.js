@@ -1,5 +1,4 @@
 import Document from "next/document";
-import Head from "next/head";
 import { SheetsRegistry, JssProvider, createGenerateId } from "react-jss";
 
 export default class JssDocument extends Document {
@@ -12,9 +11,6 @@ export default class JssDocument extends Document {
         enhanceApp: (App) => (props) =>
           (
             <JssProvider registry={registry} generateId={generateId}>
-              <Head>
-                <link rel="icon" href="/favicon.ico" />
-              </Head>
               <App {...props} />
             </JssProvider>
           ),
