@@ -1,7 +1,7 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import colors from "@/styles/colors";
-import Accordion from "@/components/accordion";
+import Accordion from "src/features/accordion";
 
 const questionsList = [
   {
@@ -14,8 +14,7 @@ const questionsList = [
   {
     key: 2,
     question: "What are the economics of the game?",
-    answer:
-      `10.000 passes will be minted at 0.1 ETH each, bringing the pot to $3.000.000. After our fee each of the 10 winners will be recieving $270.000. If you would like to read the details check out our whitepaper`,
+    answer: `10.000 passes will be minted at 0.1 ETH each, bringing the pot to $3.000.000. After our fee each of the 10 winners will be recieving $270.000. If you would like to read the details check out our whitepaper`,
     isOpen: false,
   },
   {

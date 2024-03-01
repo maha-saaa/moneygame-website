@@ -3,9 +3,9 @@ import { useRef, useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { LazyMotion, domAnimation, m } from "framer-motion";
-import Layout from "@/components/layout";
-import Content from "@/components/content";
-import Preloader from "@/components/preloader";
+import Layout from "src/features/layout";
+import Content from "src/features/content";
+import Preloader from "src/features/preloader";
 
 export default function Home() {
   const router = useRouter();

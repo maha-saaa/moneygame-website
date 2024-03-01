@@ -8,7 +8,7 @@ import disconnectLogo from "@/public/images/disconnect.webp";
 import OpenSea from "@/public/images/open-sea.svg";
 import Twitter from "@/public/images/twitter.svg";
 import Discord from "@/public/images/discord.svg";
-import { injected } from "../../connector/connector";
+import { injected } from "../../lib/connector/connector";
 import { useWeb3React } from "@web3-react/core";
 
 const navbarMenu = [
