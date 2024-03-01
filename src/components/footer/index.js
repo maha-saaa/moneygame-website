@@ -3,8 +3,8 @@ import { createUseStyles } from "react-jss";
 import { m } from "framer-motion";
 import Image from "next/image";
 import colors from "@/styles/colors";
-import footerLineUp from "@/public/images/footer-line-up.png";
-import footerLineDown from "@/public/images/footer-line-down.png";
+import footerLineUp from "@/public/images/footer-line-up.webp";
+import footerLineDown from "@/public/images/footer-line-down.webp";
 
 export default function Footer() {
   const classes = useStyles();

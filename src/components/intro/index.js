@@ -4,15 +4,15 @@ import { m } from "framer-motion";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 import Image from "next/image";
 import colors from "@/styles/colors";
-import leftBracket from "@/public/images/left-bracket.png";
-import rightBracket from "@/public/images/right-bracket.png";
-import bgGlass from "@/public/images/bg-glass.png";
+import leftBracket from "@/public/images/left-bracket.webp";
+import rightBracket from "@/public/images/right-bracket.webp";
+import bgGlass from "@/public/images/bg-glass.webp";
 import ButtonBracket from "@/public/images/button-bracket.svg";
 import frames from "@/public/images/frames.png";
-import yellowRay1 from "@/public/images/yellow-ray-1.png";
-import yellowRay2 from "@/public/images/yellow-ray-2.png";
-import yellowRay3 from "@/public/images/yellow-ray-3.png";
-import purpleLight from "@/public/images/purple-light.png";
+import yellowRay1 from "@/public/images/yellow-ray-1.webp";
+import yellowRay2 from "@/public/images/yellow-ray-2.webp";
+import yellowRay3 from "@/public/images/yellow-ray-3.webp";
+import purpleLight from "@/public/images/purple-light.webp";
 import { defaultTransition } from "@/utils/transitions";
 
 export default function Intro() {
@@ -136,6 +136,7 @@ export default function Intro() {
         quality={100}
         unoptimized
       />
+
       <div className={classes.info}>
         <div className={classes.leftSec}>
           <div onClick={goToSection} className={classes.timeLineBtn}>

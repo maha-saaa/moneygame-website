@@ -2,11 +2,11 @@ import { createUseStyles } from "react-jss";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import colors from "@/styles/colors";
-import bgGlass from "@/public/images/bg-glass.png";
-import yellowRay1 from "@/public/images/yellow-ray-1.png";
-import yellowRay2 from "@/public/images/yellow-ray-2.png";
-import yellowRay3 from "@/public/images/yellow-ray-3.png";
-import purpleLight from "@/public/images/purple-light.png";
+import bgGlass from "@/public/images/bg-glass.webp";
+import yellowRay1 from "@/public/images/yellow-ray-1.webp";
+import yellowRay2 from "@/public/images/yellow-ray-2.webp";
+import yellowRay3 from "@/public/images/yellow-ray-3.webp";
+import purpleLight from "@/public/images/purple-light.webp";
 
 export default function Preloader() {
   const classes = useStyles();

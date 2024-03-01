@@ -2,7 +2,7 @@ import React from "react";
 import { createUseStyles } from "react-jss";
 import Image from "next/image";
 import colors from "@/styles/colors";
-import headerLine from "@/public/images/header-line.png";
+import headerLine from "@/public/images/header-line.webp";
 import Intro from "@/components/intro";
 import HowToPlay from "@/components/howToPlay";
 import Team from "@/components/team";

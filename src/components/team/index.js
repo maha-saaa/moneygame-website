@@ -3,11 +3,11 @@ import { createUseStyles } from "react-jss";
 import Image from "next/image";
 import Link from "next/link";
 import colors from "@/styles/colors";
-import lineWithCircle from "@/public/images/line-with-circle.png";
-import leftBracket from "@/public/images/left-bracket.png";
-import rightBracket from "@/public/images/right-bracket.png";
-import avatar1 from "../../../public/images/avatar1.png";
-import avatar2 from "../../../public/images/avatar2.png";
+import lineWithCircle from "@/public/images/line-with-circle.webp";
+import leftBracket from "@/public/images/left-bracket.webp";
+import rightBracket from "@/public/images/right-bracket.webp";
+import avatar1 from "../../../public/images/avatar1.webp";
+import avatar2 from "../../../public/images/avatar2.webp";
 
 const data = [
   {
