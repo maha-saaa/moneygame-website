@@ -3,11 +3,11 @@ import { createUseStyles } from "react-jss";
 import Image from "next/image";
 import colors from "@/styles/colors";
 import headerLine from "@/public/images/header-line.webp";
-import Intro from "src/features/intro";
-import HowToPlay from "src/features/howToPlay";
-import Team from "src/features/team";
-import Faq from "src/features/faq";
-import Footer from "src/features/footer";
+import Intro from "src/components/intro";
+import HowToPlay from "src/components/howToPlay";
+import Team from "src/components/team";
+import Faq from "src/components/faq";
+import Footer from "src/components/footer";
 
 export default function Content() {
   const classes = useStyles();
